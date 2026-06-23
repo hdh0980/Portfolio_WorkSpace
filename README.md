@@ -6,17 +6,34 @@ This repository stores public portfolio assets used by the Notion portfolio page
 
 - Notion: https://app.notion.com/p/c6a0eb19ff868321b1eb81d66ce88111
 
+## Repository map
+
+- `assets/portfolio/`: exported portfolio images and verification evidence.
+- `README.md`: public index for the portfolio asset set.
+
 ## Assets
 
 Representative images are stored under `assets/portfolio/`.
 
 - `profile_hwang_deokhwan.jpg`
 - `hils_test_environment.png`
+
+### UL 1741 / ESS verification
+
 - `ul1741_ess_power_control.png`
 - `ul1741_ramp_rate.png`
 - `ul1741_voltage_ride_through.png`
 - `ul1741_frequency_ride_through.png`
 - `ul1741_anti_islanding.png`
+
+### UPS verification
+
 - `ups_parallel_waveform.png`
 - `ups_load_transient.png`
 - `ups_hot_swap.png`
+
+## Maintenance notes
+
+- Keep exported filenames stable so external portfolio pages do not break.
+- Add new evidence images under `assets/portfolio/` and list them here with the
+  project or verification area they support.
