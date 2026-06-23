@@ -1,4 +1,4 @@
-# Hwang Deokhwan Portfolio Workspace
+# Hwang Duckhwan Portfolio Workspace
 
 This repository stores public portfolio assets used by the Notion portfolio page.
 
@@ -15,7 +15,7 @@ This repository stores public portfolio assets used by the Notion portfolio page
 
 Representative images are stored under `assets/portfolio/`.
 
-- `profile_hwang_deokhwan.jpg`
+- `profile_hwang_Duckhwan.jpg`
 - `hils_test_environment.png`
 
 ### UL 1741 / ESS verification
