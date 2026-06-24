@@ -20,6 +20,14 @@ Representative images are stored under `assets/portfolio/`.
 
 ### UL 1741 / ESS verification
 
+UL 1741-related test coverage documented in this portfolio workspace:
+
+- ESS active power and power control verification
+- Ramp-rate control verification
+- Voltage ride-through verification
+- Frequency ride-through verification
+- Anti-islanding detection verification
+
 - `ul1741_ess_power_control.png`
 - `ul1741_ramp_rate.png`
 - `ul1741_voltage_ride_through.png`
