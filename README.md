@@ -9,8 +9,8 @@ This repository stores public portfolio assets used by the Notion portfolio page
 ## Repository map
 
 - `assets/portfolio/`: exported portfolio images and verification evidence.
-- `studies/전공학습/`: major-study categories mirrored from the reference
-  engineering blog, including its nested category structure.
+- `studies/전공학습/`: career-oriented engineering study notes, simulations,
+  and implementation examples.
 - `README.md`: public index for the portfolio asset set.
 
 ## Assets

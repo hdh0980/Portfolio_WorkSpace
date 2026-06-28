@@ -1,7 +1,7 @@
-# PI, IP, and PID Control
+# PI, IP, and PID Control Comparison
 
-> Status: folder scaffold only. Technical content will be added after scope and
-> public-disclosure review.
+> Status: learning notes are available in the parent category. Simulation and
+> verification artifacts will be added incrementally.
 
 ## Reference material
 
@@ -18,4 +18,7 @@
 - `assets/`: block diagrams, plots, and photos used in public documentation.
 - `references/`: source list and attribution notes.
 
-No technical project content has been added yet.
+## Current example
+
+- [`../../examples/pi_ip_first_order_demo.m`](../../examples/pi_ip_first_order_demo.m):
+  compares PI and IP reference responses for the same first-order plant and gains.
