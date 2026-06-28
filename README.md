@@ -9,6 +9,9 @@ This repository stores public portfolio assets used by the Notion portfolio page
 ## Repository map
 
 - `assets/portfolio/`: exported portfolio images and verification evidence.
+- `projects/01-control-engineering/pi-ip-pid-control/`: structured workspace for
+  the PI, IP, and PID control portfolio project. Technical content is pending
+  review.
 - `README.md`: public index for the portfolio asset set.
 
 ## Assets
