@@ -10,8 +10,11 @@ end
 cleanup = onCleanup(@() removeExamplePaths(courseRoot, units)); %#ok<NASGU>
 
 results = struct;
-results.DCNodal = dc_nodal_analysis(fullfile(courseRoot, ...
-    "02_직류회로_해석", "assets", "dc_nodal_analysis.png"));
+dcResults = run_dc_analysis_examples(fullfile(courseRoot, ...
+    "02_직류회로_해석", "assets"));
+results.DCNodal = dcResults.Nodal;
+results.DCMesh = dcResults.Mesh;
+results.DCSupernode = dcResults.Supernode;
 results.RLCTransient = rlc_transient_response(fullfile(courseRoot, ...
     "04_1차_2차_과도응답", "assets", "rlc_transient_response.png"));
 results.ThreePhase = three_phase_power(fullfile(courseRoot, ...

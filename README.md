@@ -16,7 +16,7 @@ This repository stores public portfolio assets used by the Notion portfolio page
 ## Engineering study highlights
 
 - [Circuit theory](./studies/전공학습/01_전기전자_핵심기초/01_회로이론/):
-  nine study units from circuit laws through two-port networks, with five
+  nine study units from circuit laws through two-port networks, with seven
   MATLAB verification examples and generated result captures.
 - [Control-system design](./studies/전공학습/02_제어시스템_설계/):
   original notes covering classical and state-space control, plus a runnable
