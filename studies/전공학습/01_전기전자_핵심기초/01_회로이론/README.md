@@ -3,6 +3,11 @@
 전압·전류의 관계를 회로 법칙으로 표현하고, 시간영역과 주파수영역에서
 전기회로의 동작을 해석하는 기초 과목입니다.
 
+각 단원은 `학습목표 → 핵심개념 → 수식과 조건 → 계산 예제 → 실무 연결 →
+자가 점검 → 참고자료` 순서로 작성했습니다. 설명과 예제는 독자적으로
+재구성했으며, MIT OpenCourseWare·OpenStax·MathWorks의 공개 원문을 출처로
+연결했습니다.
+
 ## 세부 단원
 
 1. [회로변수와 기본법칙](./01_회로변수와_기본법칙/)
@@ -14,3 +19,33 @@
 7. [공진과 주파수응답](./07_공진과_주파수응답/)
 8. [라플라스 회로해석](./08_라플라스_회로해석/)
 9. [결합회로와 2포트망](./09_결합회로와_2포트망/)
+
+## 작성 및 검증 범위
+
+- 9개 단원 모두 핵심 개념, 적용 조건, 손계산 예제, 실무 주의점, 자가 점검을
+  포함합니다.
+- 행렬해석·과도응답·3상전력·공진·2포트망처럼 수치 검증 효과가 큰 5개
+  단원은 MATLAB 예제와 생성 캡처를 함께 둡니다.
+- 나머지 단원은 공식 암기보다 적용 조건과 영역 경계를 분명히 하는 데
+  집중하며, 실행 예제를 추가할 때 같은 검증 기준을 적용합니다.
+
+## MATLAB 시뮬레이션과 캡처
+
+| 단원 | 예제 | 검증 기준 | 캡처 |
+|---|---|---|---|
+| 직류회로 | [노달해석](./02_직류회로_해석/examples/dc_nodal_analysis.m) | KCL 행렬 잔차 | [PNG](./02_직류회로_해석/assets/dc_nodal_analysis.png) |
+| 과도응답 | [RLC 계단응답](./04_1차_2차_과도응답/examples/rlc_transient_response.m) | 정상상태 전압·전류 | [PNG](./04_1차_2차_과도응답/assets/rlc_transient_response.png) |
+| 3상회로 | [평형 3상 전력](./06_교류전력과_3상회로/examples/three_phase_power.m) | 시간영역·페이저 전력 일치 | [PNG](./06_교류전력과_3상회로/assets/three_phase_power.png) |
+| 공진 | [직렬 RLC 주파수응답](./07_공진과_주파수응답/examples/series_rlc_frequency_response.m) | 이론·수치 공진주파수 일치 | [PNG](./07_공진과_주파수응답/assets/series_rlc_frequency_response.png) |
+| 2포트 | [ABCD 종속연결](./09_결합회로와_2포트망/examples/two_port_abcd_cascade.m) | 상호성 행렬식 $AD-BC=1$ | [PNG](./09_결합회로와_2포트망/assets/two_port_abcd_cascade.png) |
+
+전체 예제는 [run_all_circuit_examples.m](./examples/run_all_circuit_examples.m)로
+실행합니다. 추가 툴박스 없이 기본 MATLAB R2025b에서 검증했습니다.
+
+```matlab
+cd('studies/전공학습/01_전기전자_핵심기초/01_회로이론/examples')
+run_all_circuit_examples
+```
+
+회로값은 학습용 입력 파라미터이며, 노드전압·전력·공진주파수·캡처는 코드가
+실행 시점에 계산하고 생성합니다.
