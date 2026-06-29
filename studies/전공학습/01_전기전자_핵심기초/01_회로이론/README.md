@@ -25,7 +25,7 @@
 - 9개 단원 모두 핵심 개념, 적용 조건, 손계산 예제, 실무 주의점, 자가 점검을
   포함합니다.
 - 행렬해석·과도응답·3상전력·공진·2포트망처럼 수치 검증 효과가 큰 5개
-  단원은 MATLAB 예제와 생성 캡처를 함께 둡니다.
+  단원은 MATLAB 예제 7개와 생성 캡처 7개를 함께 둡니다.
 - 나머지 단원은 공식 암기보다 적용 조건과 영역 경계를 분명히 하는 데
   집중하며, 실행 예제를 추가할 때 같은 검증 기준을 적용합니다.
 
@@ -33,7 +33,7 @@
 
 | 단원 | 예제 | 검증 기준 | 캡처 |
 |---|---|---|---|
-| 직류회로 | [노달해석](./02_직류회로_해석/examples/dc_nodal_analysis.m) | KCL 행렬 잔차 | [PNG](./02_직류회로_해석/assets/dc_nodal_analysis.png) |
+| 직류회로 | [노달·메시·슈퍼노드](./02_직류회로_해석/) | KCL·KVL·전압원 구속식 잔차 | [회로도 3종](./02_직류회로_해석/#5-matlab-검증과-재생성) |
 | 과도응답 | [RLC 계단응답](./04_1차_2차_과도응답/examples/rlc_transient_response.m) | 정상상태 전압·전류 | [PNG](./04_1차_2차_과도응답/assets/rlc_transient_response.png) |
 | 3상회로 | [평형 3상 전력](./06_교류전력과_3상회로/examples/three_phase_power.m) | 시간영역·페이저 전력 일치 | [PNG](./06_교류전력과_3상회로/assets/three_phase_power.png) |
 | 공진 | [직렬 RLC 주파수응답](./07_공진과_주파수응답/examples/series_rlc_frequency_response.m) | 이론·수치 공진주파수 일치 | [PNG](./07_공진과_주파수응답/assets/series_rlc_frequency_response.png) |
