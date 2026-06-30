@@ -148,26 +148,11 @@ $$
 \langle S\rangle = \frac{E_0^2}{2\eta_0} = \frac{100}{2\times377} = 0.133\;\text{W/m}^2
 $$
 
-## 7. 실무 연결과 주의점
+## 학습·검증 기록
 
-- EV OBC의 고속 스위칭(수십~수백 kHz)에서 $\partial\mathbf{E}/\partial t$·$\partial\mathbf{B}/\partial t$가 커서 정자계·정전계 근사가 무너진다. 변위전류와 시변 결합이 EMI 방사의 원천이다.
-- 패러데이 법칙이 인덕터 기전력 $v=L\,di/dt$의 전자기 근거. 모든 스위칭 파형에서 $d\Phi/dt$가 발생하는 루프 면적이 클수록 노이즈가 커진다 → 배선 루프 면적 최소화 규칙.
-- 포인팅 벡터는 도체 손실의 에너지 흐름 방향을 정확히 설명한다. 케이블 또는 버스바 표면에서 에너지가 도체 안으로 유입되어 열로 변환된다.
-- 맥스웰 방정식의 대칭성: $\mathbf{E}\leftrightarrow\mathbf{H}$, $\varepsilon\leftrightarrow\mu$ 이중성(duality)을 이용하면 전기 문제 해법을 자기 문제에 바로 적용 가능.
-
-## 8. 자가 점검
-
-1. 정현파로 변화하는 커패시터 전압 $v=V_0\cos\omega t$에서 변위전류밀도를 구하라 (평행판, 면적 $A$, 간격 $d$, 유전율 $\varepsilon$).
-2. 맥스웰 방정식 4개를 각각 대응하는 물리 법칙 이름과 짝을 지어라.
-3. $\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t$가 렌츠 법칙의 음(-) 부호와 어떻게 연관되는가?
-
-<details><summary>정답</summary>
-
-1. 전계 $E = v/d = V_0\cos\omega t/d$. 변위전류밀도: $J_d = \varepsilon\partial E/\partial t = -\varepsilon\omega V_0\sin\omega t/d$ (크기 $\varepsilon\omega V_0/d$).
-2. $\nabla\cdot\mathbf{D}=\rho_v$: 가우스 전기법칙 / $\nabla\cdot\mathbf{B}=0$: 가우스 자기법칙(자기 단극 없음) / $\nabla\times\mathbf{E}=-\partial\mathbf{B}/\partial t$: 패러데이 법칙 / $\nabla\times\mathbf{H}=\mathbf{J}+\partial\mathbf{D}/\partial t$: 암페어-맥스웰 법칙.
-3. 자속이 증가하면($+\partial\mathbf{B}/\partial t$) 유도 전계는 반대 방향으로 회전($-$). 이 전계가 유도하는 전류는 자속 증가를 막는 방향 → 렌츠 법칙.
-
-</details>
+- **핵심 정리:** 맥스웰 네 방정식은 전하·자속·유도 전계·전도 및 변위전류를 하나의 체계로 묶고, 포인팅 벡터 $\mathbf{E}\times\mathbf{H}$로 에너지 흐름을 표현한다.
+- **확인 근거:** 진공 평면파 예제에서 $E_0=10$ V/m와 $\eta_0=377$ Ω로 $H_0=26.5$ mA/m를 구하고, $E_0H_0/2$와 $E_0^2/(2\eta_0)$ 모두 평균 전력밀도 $0.133$ W/m²를 주었다.
+- **다음 탐구:** 패러데이 법칙과 암페어-맥스웰 법칙의 회전형을 연속 적용해 균일 매질의 파동방정식을 유도한다.
 
 ## 참고자료
 
