@@ -155,20 +155,56 @@ Add these links:
 - `https://www.ul.com/news/ul-launches-advanced-inverter-testing-and-certification-program`
 - `https://resourcecenter.ieee.org/education/tutorials/pes_ed_tut04_1547_091318_sld`
 
-### Task 4: 저장소 루트 안내 갱신
+### Task 4: 저장소 루트 README 재구성
 
 **Files:**
 - Modify: `README.md`
 
-- [ ] **Step 1: 자산 상세 문서 링크를 추가한다**
+- [ ] **Step 1: 저장소 소개와 바로가기를 한국어로 정리한다**
 
-Replace the bare image-list presentation under `## Assets` with a prominent link:
+Replace the current English introduction and raw asset list with a Korean introduction and these primary links:
 
 ```markdown
-- [UL 1741 SA·UPS 시험 케이스와 파형 설명](./assets/portfolio/)
+- [검증 자산: UL 1741 SA·UPS 시험 설명](./assets/portfolio/)
+- [전공학습 전체 목차](./studies/전공학습/)
+- [제어시스템 설계](./studies/전공학습/02_제어시스템_설계/)
 ```
 
-Keep the existing five UL 1741 coverage names and three UPS categories as concise lists, but remove duplicate raw filename lists so the detailed folder README is the single interpretation source.
+- [ ] **Step 2: 실제 폴더 구조를 코드 블록으로 표시한다**
+
+The tree must include:
+
+```text
+Portfolio_WorkSpace/
+├─ assets/portfolio/                 # UL 1741 SA·UPS 검증 자산과 상세 설명
+├─ studies/전공학습/
+│  ├─ 01_전기전자_핵심기초/          # 5과목·46개 단원
+│  ├─ 02_제어시스템_설계/            # 노트 7개·MATLAB 예제·비교 프로젝트
+│  ├─ 03_모델링_시뮬레이션/          # 계획
+│  ├─ 04_전력변환_회로/              # 계획
+│  ├─ 05_모터구동_제어/              # 계획
+│  ├─ 06_센서_신호처리/              # 계획
+│  ├─ 07_전동화_시스템/              # 계획
+│  ├─ 08_공학기초_수학/              # 계획
+│  ├─ 09_기술동향_리서치/            # 계획
+│  └─ 10_산업사례_리뷰/              # 계획
+└─ docs/superpowers/                 # 작업 설계·구현 계획 기록
+```
+
+- [ ] **Step 3: 완료 콘텐츠와 계획 콘텐츠를 분리한다**
+
+Add a completed-content table covering:
+
+- UL 1741 SA: ESS power control, ramp rate, voltage/frequency ride-through, anti-islanding;
+- UPS: parallel operation, load transient, hot swap;
+- electrical/electronic foundations: 46 units across five subjects, each with learning/verification records;
+- control-system design: seven notes, one first-order PI/IP MATLAB example, and one PI/IP/PID comparison project.
+
+Add one short planned-areas paragraph listing 03 through 10 without claiming completed content.
+
+- [ ] **Step 4: 오래되거나 중복된 문구를 제거한다**
+
+Remove nonexistent `profile_hwang_Duckhwan.jpg` and `hils_test_environment.png`, all duplicate raw PNG filename lists, and the stale claim that subjects other than circuit theory are scaffolds. Keep privacy and stable-link maintenance principles in concise Korean.
 
 ### Task 5: 전체 검증
 
@@ -204,7 +240,7 @@ git diff --check
 git status --short
 ```
 
-Expected: root README, asset README, and five UL 1741 PNGs only, plus already committed design/plan documents.
+Expected: root README, asset README, and five UL 1741 PNGs only. Design and plan documents are already committed.
 
 - [ ] **Step 4: GitHub 렌더링 형태를 검토한다**
 
