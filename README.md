@@ -1,61 +1,72 @@
 # Hwang Duckhwan Portfolio Workspace
 
-This repository stores public portfolio assets used by the Notion portfolio page.
+전력변환·계통연계 검증 경험과 전기전자·제어 분야의 개인 학습 기록을 한곳에서
+관리하는 포트폴리오 저장소입니다. 결과 이미지만 나열하지 않고, 각 자료의 목적,
+검증 관점과 다시 확인할 수 있는 근거를 함께 남깁니다.
 
-## Portfolio
+- [Notion 포트폴리오](https://app.notion.com/p/c6a0eb19ff868321b1eb81d66ce88111)
+- [검증 자산: UL 1741 SA·UPS 시험 설명](./assets/portfolio/)
+- [전공학습 전체 목차](./studies/전공학습/)
+- [제어시스템 설계](./studies/전공학습/02_제어시스템_설계/)
 
-- Notion: https://app.notion.com/p/c6a0eb19ff868321b1eb81d66ce88111
+## 저장소 구조
 
-## Repository map
+```text
+Portfolio_WorkSpace/
+├─ assets/portfolio/                 # UL 1741 SA·UPS 검증 자산과 상세 설명
+├─ studies/전공학습/
+│  ├─ 01_전기전자_핵심기초/          # 5과목·46개 단원
+│  ├─ 02_제어시스템_설계/            # 노트 7개·MATLAB 예제·비교 프로젝트
+│  ├─ 03_모델링_시뮬레이션/          # 계획
+│  ├─ 04_전력변환_회로/              # 계획
+│  ├─ 05_모터구동_제어/              # 계획
+│  ├─ 06_센서_신호처리/              # 계획
+│  ├─ 07_전동화_시스템/              # 계획
+│  ├─ 08_공학기초_수학/              # 계획
+│  ├─ 09_기술동향_리서치/            # 계획
+│  └─ 10_산업사례_리뷰/              # 계획
+└─ docs/superpowers/                 # 작업 설계·구현 계획 기록
+```
 
-- `assets/portfolio/`: exported portfolio images and verification evidence.
-- `studies/전공학습/`: career-oriented engineering study notes, simulations,
-  and implementation examples.
-- `README.md`: public index for the portfolio asset set.
+## 주요 콘텐츠
 
-## Engineering study highlights
+| 영역 | 현재 내용 | 바로가기 |
+|---|---|---|
+| 계통연계·ESS 검증 | ESS Power Control, Ramp Rate, Voltage/Frequency Ride-Through, Anti-Islanding | [시험 설명](./assets/portfolio/#ul-1741-sa-시험-케이스) |
+| UPS 검증 | Parallel Operation, Load Transient, Hot Swap | [파형 설명](./assets/portfolio/#ups-검증-파형) |
+| 전기전자 핵심기초 | 회로이론·전자기학·전자회로·논리회로·신호와 시스템, 총 46개 단원 | [학습 목차](./studies/전공학습/01_전기전자_핵심기초/) |
+| 제어시스템 설계 | 핵심 노트 7개, PI/IP 1차 시스템 MATLAB 예제, PI/IP/PID 비교 프로젝트 | [제어 학습](./studies/전공학습/02_제어시스템_설계/) |
 
-- [Circuit theory](./studies/전공학습/01_전기전자_핵심기초/01_회로이론/):
-  nine study units from circuit laws through two-port networks, with seven
-  MATLAB verification examples and generated result captures.
-- [Control-system design](./studies/전공학습/02_제어시스템_설계/):
-  original notes covering classical and state-space control, plus a runnable
-  PI/IP comparison example.
+## 검증 자산
 
-The [major-study index](./studies/전공학습/) separates completed notes and
-executable evidence from subject folders that are still scaffolds.
+[전력변환·계통연계 검증 포트폴리오](./assets/portfolio/)에서는 UL 1741 SA와
+UPS 자료를 시험 목적별로 분리했습니다. UL 1741 공개 이미지는 시험 케이스만
+남기고 실제 측정 파형과 계측값을 모자이크 처리했습니다.
 
-## Assets
+- **UL 1741 SA:** ESS 충·방전 전력제어, Ramp Rate, 전압·주파수 Ride-Through,
+  Anti-Islanding
+- **UPS:** 병렬운전, 부하변동, Hot Swap
 
-Representative images are stored under `assets/portfolio/`.
+## 전공학습
 
-- `profile_hwang_Duckhwan.jpg`
-- `hils_test_environment.png`
+### 작성 완료
 
-### UL 1741 / ESS verification
+- **전기전자 핵심기초:** 5과목 46개 단원. 각 단원은 `핵심 정리 → 확인 근거 →
+  다음 탐구`로 끝나며 계산 예제와 공개 참고자료를 연결합니다.
+- **회로이론 실행 검증:** MATLAB 예제 7개와 결과 캡처 7개를 포함합니다.
+- **제어시스템 설계:** 고전제어·디지털제어·상태공간 노트 7개와 실행 가능한
+  PI/IP 예제, PI/IP/PID 비교 프로젝트를 포함합니다.
 
-UL 1741-related test coverage documented in this portfolio workspace:
+### 계획 영역
 
-- ESS active power and power control verification
-- Ramp-rate control verification
-- Voltage ride-through verification
-- Frequency ride-through verification
-- Anti-islanding detection verification
+`03_모델링_시뮬레이션`부터 `10_산업사례_리뷰`까지는 학습 범위를 먼저 구분한
+폴더입니다. 본문과 실행 근거가 추가되기 전에는 완료 콘텐츠로 표시하지 않습니다.
 
-- `ul1741_ess_power_control.png`
-- `ul1741_ramp_rate.png`
-- `ul1741_voltage_ride_through.png`
-- `ul1741_frequency_ride_through.png`
-- `ul1741_anti_islanding.png`
+## 작성·공개 원칙
 
-### UPS verification
-
-- `ups_parallel_waveform.png`
-- `ups_load_transient.png`
-- `ups_hot_swap.png`
-
-## Maintenance notes
-
-- Keep exported filenames stable so external portfolio pages do not break.
-- Add new evidence images under `assets/portfolio/` and list them here with the
-  project or verification area they support.
+1. 외부 자료는 출처를 남기고 설명·수식·도식은 직접 재구성합니다.
+2. 기술 문서는 `개념 → 적용 조건 → 계산·검증 → 학습 기록 → 다음 탐구` 순서로
+   정리합니다.
+3. 시뮬레이션과 코드는 실행 조건, 파라미터와 판정 기준을 함께 남깁니다.
+4. 실제 회사의 비공개 수치·회로·소스 코드와 원본 계측 파형은 공개하지 않습니다.
+5. 외부에서 참조하는 자산 파일명과 폴더 링크는 가능한 한 안정적으로 유지합니다.
