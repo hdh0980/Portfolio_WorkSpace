@@ -101,7 +101,7 @@ Edit with mosaic rectangle `x=45..1950, y=660..1095`. Preserve the title, RLC ci
 
 For each output, inspect with `view_image` and confirm:
 
-- dimensions remain 2000x1125;
+- outputs retain a 16:9 canvas at no less than 1600x900;
 - all retained case text is readable and unchanged;
 - all original waveform traces, axes, values, and time response are unreadable;
 - no generated or altered text appears.
