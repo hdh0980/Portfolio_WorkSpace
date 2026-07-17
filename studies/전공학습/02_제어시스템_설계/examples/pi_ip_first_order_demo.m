@@ -43,7 +43,7 @@ fprintf('IP: rise %.4f s, settling %.4f s, overshoot %.2f %%\n', ...
     ipInfo.RiseTime, ipInfo.SettlingTime, ipInfo.Overshoot);
 
 %% Plot
-figure('Color', 'w');
+figure('Color', 'w', 'Position', [100 100 900 480]);
 plot(piTime, piOutput, 'LineWidth', 1.8);
 hold on;
 plot(ipTime, ipOutput, '--', 'LineWidth', 1.8);
@@ -53,6 +53,16 @@ xlabel('Time [s]');
 ylabel('Normalized output');
 title('PI vs. IP reference response');
 legend('PI', 'IP', 'Location', 'southeast');
+
+% Keep the plot used in the study note so that the Markdown page has a
+% reproducible result rather than a hand-drawn illustration.
+assetDirectory = fullfile(fileparts(mfilename('fullpath')), '..', 'assets');
+if ~isfolder(assetDirectory)
+    mkdir(assetDirectory);
+end
+outputPath = fullfile(assetDirectory, 'pi_ip_reference_response.png');
+exportgraphics(gcf, outputPath, 'Resolution', 180);
+fprintf('Saved comparison plot: %s\n', outputPath);
 
 %% Review questions
 % 1. Why do PI and IP have the same characteristic denominator?
