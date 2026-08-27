@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ESS 시스템 구성과 계통연계 기능 검증 경험">
+    <title>ESS | 전력변환 포트폴리오</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E">
+    <style>
+      :root { --ink:#15211d; --paper:#f6f3eb; --panel:#ebe7dd; --line:#c9c4b7; --accent:#a84624; --signal:#506f85; } * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Serif KR","Batang",serif; } main { width:min(100% - 40px,1000px); margin:0 auto; padding:48px 0 96px; } a { color:inherit; } .back { display:inline-block; margin-bottom:82px; color:var(--accent); font:700 13px/1 "Noto Sans KR",sans-serif; text-decoration:none; } .back:hover { text-decoration:underline; } .kicker { margin:0 0 17px; color:var(--accent); font:700 12px/1 "Noto Sans KR",sans-serif; letter-spacing:.14em; } h1 { margin:0; font-size:clamp(64px,13vw,132px); line-height:.86; letter-spacing:-.08em; } .lead { max-width:730px; margin:42px 0 64px; font-size:clamp(21px,3vw,30px); line-height:1.65; word-break:keep-all; } section { border-top:2px solid var(--ink); padding:25px 0 44px; } h2 { margin:0 0 20px; font-size:23px; letter-spacing:-.04em; } h3 { margin:0; font:700 13px/1.4 "Noto Sans KR",sans-serif; letter-spacing:.04em; } p,li,td,th { font:400 16px/1.8 "Noto Sans KR",sans-serif; word-break:keep-all; } p { margin:0; } ul { margin:16px 0 0; padding-left:1.2em; } li + li { margin-top:7px; } .architecture { margin:0; padding:26px; background:var(--panel); border:1px solid var(--line); } .architecture figcaption { margin-bottom:24px; font:700 13px/1.4 "Noto Sans KR",sans-serif; letter-spacing:.04em; } .flow { display:grid; grid-template-columns:repeat(9,minmax(0,1fr)); align-items:center; gap:8px; } .flow.secondary { width:74%; margin:20px auto 0; grid-template-columns:repeat(5,minmax(0,1fr)); } .block { min-height:74px; display:grid; place-content:center; padding:10px; border:1px solid var(--ink); background:var(--paper); text-align:center; font:700 13px/1.35 "Noto Sans KR",sans-serif; word-break:keep-all; } .block em { display:block; margin-top:4px; color:#51605a; font:400 11px/1.35 "Noto Sans KR",sans-serif; font-style:normal; } .arrow { color:var(--accent); text-align:center; font:400 24px/1 sans-serif; } .controller { margin-top:22px; padding:13px 15px; border-left:3px solid var(--signal); color:#334956; background:#e4eaed; font:600 13px/1.55 "Noto Sans KR",sans-serif; } .reference { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(230px,.95fr); gap:28px; align-items:center; } .product { margin:0; background:white; border:1px solid var(--line); } .product img { display:block; width:100%; height:270px; object-fit:cover; } .product figcaption { padding:13px 15px 15px; border-top:1px solid var(--line); font:400 12px/1.5 "Noto Sans KR",sans-serif; } .product a { color:var(--accent); font-weight:700; } .principle { padding:3px 0; } .principle p { margin-top:12px; } .component-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:var(--line); } .component-grid div { min-height:170px; padding:20px; background:var(--paper); } .component-grid p { margin-top:10px; font-size:14px; } .steps { counter-reset:step; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; } .steps div { padding:0 0 0 48px; position:relative; } .steps div::before { counter-increment:step; content:"0" counter(step); position:absolute; left:0; top:0; color:var(--accent); font:700 15px/1 "Noto Sans KR",sans-serif; } .steps p { margin-top:8px; font-size:14px; } .sources { margin-top:26px; color:#4c5953; font:400 13px/1.7 "Noto Sans KR",sans-serif; } .sources a { color:var(--accent); } .note { margin-top:32px; padding-top:22px; border-top:1px solid var(--line); color:#47534e; font-size:14px; } @media (max-width:700px) { main { width:min(100% - 32px,1000px); padding-top:32px; } .back { margin-bottom:58px; } .flow,.flow.secondary { width:100%; grid-template-columns:1fr; gap:8px; } .arrow { transform:rotate(90deg); } .reference,.component-grid,.steps { grid-template-columns:1fr; } .product img { height:240px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="../../index.html">← 포트폴리오</a>
+      <p class="kicker">02 / Energy Storage System</p>
+      <h1>ESS</h1>
+      <p class="lead">태양광, 에너지저장장치, 연료전지 인버터의 계통연계 조건과 전력변환 동작을 검증했습니다.</p>
+      <section>
+        <h2>시스템 아키텍처</h2>
+        <figure class="architecture">
+          <figcaption>대표 계통연계 ESS의 전력 흐름</figcaption>
+          <div class="flow" aria-label="발전원에서 계통까지의 ESS 전력 흐름">
+            <div class="block">태양광·연료전지<em>DC 발전원</em></div><span class="arrow">→</span>
+            <div class="block">DC/DC<em>전압 변환</em></div><span class="arrow">→</span>
+            <div class="block">DC Bus<em>전력 결합</em></div><span class="arrow">→</span>
+            <div class="block">PCS<em>DC ↔ AC</em></div><span class="arrow">→</span>
+            <div class="block">계통·부하<em>AC</em></div>
+          </div>
+          <div class="flow secondary">
+            <div class="block">배터리<em>에너지 저장</em></div><span class="arrow">↔</span><div class="block">양방향 DC/DC<em>충전·방전</em></div><span class="arrow">↔</span><div class="block">DC Bus</div>
+          </div>
+          <div class="controller">제어기·보호: 전압·전류·주파수 상태를 확인하고 충전·대기·방전 상태, 계통 이상 시 보호 동작과 복귀 조건을 관리합니다.</div>
+        </figure>
+      </section>
+      <section>
+        <h2>제품 참고 이미지</h2>
+        <div class="reference">
+          <figure class="product">
+            <img src="../../assets/products/ess-tesla-megapack.jpg" alt="Tesla Megapack 에너지저장장치">
+            <figcaption>대표 제품 사진 · <a href="https://www.tesla.com/firstresponders/energy" target="_blank" rel="noreferrer">Tesla Megapack</a></figcaption>
+          </figure>
+          <div class="principle">
+            <h3>저장과 계통연계</h3>
+            <p>ESS는 전력을 배터리에 저장하고 필요 시 다시 공급하는 시스템입니다. PCS는 DC와 AC 사이의 전력 흐름을 제어하며, 발전원·계통·부하 상태에 따라 충전과 방전을 조정합니다.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>ESS를 이루는 요소</h2>
+        <div class="component-grid">
+          <div><h3>배터리</h3><p>셀·모듈·랙 또는 팩으로 에너지를 저장합니다. 시스템의 에너지 용량은 필요한 공급 시간과 연결됩니다.</p></div>
+          <div><h3>BMS</h3><p>전압·온도 등 배터리 상태를 확인하고, 과충전·과방전 등 안전 조건을 관리합니다.</p></div>
+          <div><h3>PCS</h3><p>배터리의 DC 전력과 계통·부하의 AC 전력 사이를 양방향으로 변환하고 충전·방전을 제어합니다.</p></div>
+          <div><h3>EMS</h3><p>상위 운전 목적에 따라 충전·방전 계획과 출력 지령을 관리하며, PCS·BMS의 상태를 종합해 봅니다.</p></div>
+        </div>
+      </section>
+      <section>
+        <h2>계통연계 운전의 확인 순서</h2>
+        <div class="steps">
+          <div><h3>상태 확인</h3><p>계통 전압·주파수와 배터리 상태를 확인해 충전·대기·방전 가능 조건을 판단합니다.</p></div>
+          <div><h3>전력 제어</h3><p>출력 지령을 변경할 때 전력·전류의 변화율과 DC Bus 상태가 의도대로 움직이는지 확인합니다.</p></div>
+          <div><h3>보호·복귀</h3><p>계통 이상이나 단독운전 조건에서 정지·유지·복귀 시퀀스가 요구 조건에 맞는지 확인합니다.</p></div>
+        </div>
+      </section>
+      <section>
+        <h2>업무</h2>
+        <ul>
+          <li>충전·대기·방전 상태 전환과 유효전력 제어 조건을 확인했습니다.</li>
+          <li>출력 변화율, 전압·주파수 이상 상황, 계통 분리 검출 조건을 시험 시나리오로 정리했습니다.</li>
+          <li>제어기 I/O와 계통·배터리·부하 모델을 연결해 계통연계 기능을 검증했습니다.</li>
+          <li>보호 시간, 상태 전이, 릴리스 이력을 기준으로 소프트웨어 문제를 추적했습니다.</li>
+        </ul>
+      </section>
+      <p class="note">시스템도는 공개용 대표 구성입니다. 고객 정보, 프로젝트 식별 정보, 시험 조건, 원본 파형과 제어 파라미터는 포함하지 않습니다.</p>
+      <p class="sources">참고: <a href="https://www.energy.gov/sites/default/files/2025-01/BESSIE_supply-chain-battery-report_111124_OPENRELEASE_SJ_1.pdf" target="_blank" rel="noreferrer">U.S. Department of Energy — BESS Components and Functions</a></p>
+    </main>
+  </body>
+</html>

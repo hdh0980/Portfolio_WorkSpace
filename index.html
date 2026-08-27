@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UPS, ESS, OBC 전력변환 포트폴리오">
+    <title>전력변환 포트폴리오</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E">
+    <style>
+      :root { color-scheme: light; --ink: #15211d; --paper: #f6f3eb; --line: #c9c4b7; --accent: #a84624; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Noto Serif KR", "Batang", serif; }
+      main { width: min(100% - 40px, 980px); margin: 0 auto; padding: 72px 0 96px; }
+      .eyebrow { margin: 0 0 22px; color: var(--accent); font: 700 12px/1.2 "Noto Sans KR", sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+      h1 { max-width: 13ch; margin: 0; font-size: clamp(46px, 9vw, 92px); line-height: .98; letter-spacing: -.065em; }
+      .intro { max-width: 570px; margin: 40px 0 76px; font-size: clamp(20px, 2.3vw, 27px); line-height: 1.65; word-break: keep-all; }
+      nav { border-top: 2px solid var(--ink); }
+      a { color: inherit; text-decoration: none; }
+      .item { display: grid; grid-template-columns: 132px 1fr auto; gap: 24px; align-items: baseline; border-bottom: 1px solid var(--line); padding: 27px 0 25px; transition: color .16s ease, padding-left .16s ease; }
+      .item:hover { color: var(--accent); padding-left: 12px; }
+      .num { color: var(--accent); font: 700 12px/1 "Noto Sans KR", sans-serif; letter-spacing: .12em; }
+      .name { font-size: clamp(28px, 5vw, 46px); letter-spacing: -.045em; }
+      .desc { margin: 0; font: 400 15px/1.55 "Noto Sans KR", sans-serif; word-break: keep-all; }
+      .arrow { font: 400 30px/1 sans-serif; }
+      @media (max-width: 640px) { main { width: min(100% - 32px, 980px); padding-top: 48px; } .item { grid-template-columns: 52px 1fr; gap: 12px; } .desc { grid-column: 2; } .arrow { grid-column: 2; grid-row: 1; justify-self: end; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Power Conversion Portfolio</p>
+      <h1>전력변환과 제어의 기록</h1>
+      <p class="intro">전력변환 시스템을 설계하고, 조건을 나누어 확인하고, 문제의 원인을 다시 검증해 온 업무를 정리했습니다.</p>
+      <nav aria-label="포트폴리오 목차">
+        <a class="item" href="portfolio/UPS/"><span class="num">01</span><span class="name">UPS</span><p class="desc">무정전 전원, 출력전압 제어와 병렬운전 검증</p><span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="item" href="portfolio/ESS/"><span class="num">02</span><span class="name">ESS</span><p class="desc">태양광·에너지저장장치·연료전지 인버터와 계통연계 기능 검증</p><span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="item" href="portfolio/OBC/"><span class="num">03</span><span class="name">OBC</span><p class="desc">차량 충전과 V2G·V2L 양방향 전력변환 제어 검증</p><span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="item" href="AI_Engineering/"><span class="num">04</span><span class="name">전력전자 랩</span><p class="desc">제어·DC-DC·PFC를 연결한 인터랙티브 학습 환경</p><span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </main>
+  </body>
+</html>
