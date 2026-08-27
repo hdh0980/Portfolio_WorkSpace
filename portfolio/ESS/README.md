@@ -4,6 +4,12 @@
 
 ![ESS 제품 예시](./assets/product/ess-tesla-megapack.jpg)
 
+## 공개 작업 캡처
+
+![충방전 전력 제어 HILS 화면](./assets/evidence/ul1741_ess_power_control.png)
+
+충전·방전 전력 제어와 모드 전환을 확인한 공개용 HILS 화면입니다. Ramp Rate, Voltage/Frequency Ride-Through, Anti-Islanding 화면은 [사례 문서](./CASE_STUDY.md)에서 시험 항목별로 확인할 수 있습니다. 이 자료는 시험의 관찰 항목을 설명하기 위한 것으로, 특정 인증의 최종 성적서가 아닙니다.
+
 ## 사례 문서
 
 - [ESS 사례 읽기](./CASE_STUDY.md)

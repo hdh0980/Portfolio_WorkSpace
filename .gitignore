@@ -8,3 +8,4 @@
 
 # Local browser-check artifacts
 /output/playwright/
+/.playwright-cli/

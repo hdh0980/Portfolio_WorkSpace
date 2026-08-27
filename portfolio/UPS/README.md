@@ -4,6 +4,12 @@
 
 ![UPS 제품 예시](./assets/product/ups-schneider-galaxy-300.jpg)
 
+## 공개 작업 캡처
+
+![병렬운전 전류 분담과 출력 파형](./assets/evidence/ups_parallel_waveform.png)
+
+병렬운전에서 모듈별 전류 분담과 출력의 시간 관계를 확인한 공개용 파형입니다. 부하 과도와 Hot Swap 화면은 [사례 문서](./CASE_STUDY.md)에서 함께 볼 수 있습니다. 파형은 검증 관점을 보여 주는 자료이며, 특정 제품의 인증 성적서나 원본 계측 로그가 아닙니다.
+
 ## 사례 문서
 
 - [UPS 사례 읽기](./CASE_STUDY.md)

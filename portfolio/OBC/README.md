@@ -4,6 +4,12 @@
 
 ![OBC 제품 예시](./assets/product/obc-borgwarner.jpg)
 
+## 연계 학습 화면
+
+![PFC 전류 제어 학습 화면](../../studies/전공학습/02_제어시스템_설계/lab-assets/labs/pfc-lab.png)
+
+OBC 전력단의 PFC·DC/DC·제어 알고리즘을 이해하기 위해 정리한 공개용 학습 화면입니다. 실제 차량 OBC의 회로·제어소프트웨어·시험 캡처가 아니며, [사례 문서](./CASE_STUDY.md)에서 화면의 사용 범위를 명확히 표시했습니다.
+
 ## 사례 문서
 
 - [OBC 사례 읽기](./CASE_STUDY.md)

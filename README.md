@@ -8,9 +8,9 @@ UPS, ESS, OBC 사례와 전공학습 기록을 공개 가능한 범위에서 분
 
 | 사례 | 읽을 내용 | 문서 |
 | --- | --- | --- |
-| UPS | 병렬운전, 부하 과도, Hot Swap 상황에서 출력 연속성과 전류 분담을 확인한 사례 | [UPS](./portfolio/UPS/README.md) |
-| ESS | 계통연계 ESS의 전력 제어, Ramp Rate, Ride-Through, Anti-Islanding을 공개 범위에서 정리한 사례 | [ESS](./portfolio/ESS/README.md) |
-| OBC | AC 입력부터 배터리까지의 전력 경로와 G2V·V2L·V2G 조건을 검토한 사례 | [OBC](./portfolio/OBC/README.md) |
+| UPS | 병렬운전, 부하 과도, Hot Swap 상황에서 출력 연속성과 전류 분담을 확인한 사례. 공개 파형 3장을 함께 볼 수 있다. | [UPS](./portfolio/UPS/README.md) |
+| ESS | 계통연계 ESS의 전력 제어, Ramp Rate, Ride-Through, Anti-Islanding을 공개 범위에서 정리한 사례. HILS 결과 캡처와 시험 항목을 함께 볼 수 있다. | [ESS](./portfolio/ESS/README.md) |
+| OBC | AC 입력부터 배터리까지의 전력 경로와 G2V·V2L·V2G 조건을 검토한 사례. 공개용 전력전자 학습 화면과 사례 경계를 함께 볼 수 있다. | [OBC](./portfolio/OBC/README.md) |
 
 [포트폴리오 화면 보기](./portfolio/index.html)
 
@@ -22,6 +22,7 @@ UPS, ESS, OBC 사례와 전공학습 기록을 공개 가능한 범위에서 분
 - [과목·프로젝트별 인덱스](./studies/전공학습/README.md)
 - [전기전자 핵심기초](./studies/전공학습/01_전기전자_핵심기초/README.md)
 - [제어시스템 설계](./studies/전공학습/02_제어시스템_설계/README.md)
+- [산업동향 파악 · 2025년 월별 기록](./studies/산업동향_파악/README.md)
 
 ## 3. 개인 작업환경
 
