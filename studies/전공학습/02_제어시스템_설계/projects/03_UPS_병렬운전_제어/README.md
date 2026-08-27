@@ -26,12 +26,12 @@ UPS를 여러 대 묶으면 용량을 늘리고 운전 중 한 대를 분리·�
 
 ## 파형으로 확인한 것
 
-![병렬운전 정상상태 전류 분담](../../../../../assets/portfolio/ups_parallel_waveform.png)
+![병렬운전 정상상태 전류 분담](../../../../../portfolio/UPS/assets/evidence/ups_parallel_waveform.png)
 
 *공개 처리한 정상상태 캡처. 출력전압, 전체 전류, 두 분담 전류의 RMS 값을 함께
 확인해 전류가 한 모듈로 쏠리지 않는지 봤다.*
 
-![모듈 투입·분리 전후 전류 이관](../../../../../assets/portfolio/ups_hot_swap.png)
+![모듈 투입·분리 전후 전류 이관](../../../../../portfolio/UPS/assets/evidence/ups_hot_swap.png)
 
 *공개 처리한 hot-swap 캡처. 한 전류 채널이 사라지거나 추가될 때 나머지 채널이
 부하를 이어받고 새로운 정상상태로 수렴하는지를 확인했다.*

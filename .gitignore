@@ -1,2 +1,10 @@
 # Local planning artifacts retained outside the public portfolio
 /docs/superpowers/
+
+# Personal agent workspace, local secrets, and machine-specific settings
+/workspace-private/
+/.env
+/.env.*
+
+# Local browser-check artifacts
+/output/playwright/
