@@ -1,14 +1,5 @@
 # 바이어스와 소신호 모델
 
-## 학습 목표
-- BJT 4저항 바이어스 회로의 직류 동작점을 체계적으로 계산할 수 있다.
-- BJT 소신호 모델($g_m$, $r_\pi$, $r_o$, $C_\pi$, $C_\mu$)의 각 소자 값을 동작점에서 유도할 수 있다.
-- MOSFET 소신호 모델($g_m$, $r_o$, $C_{gs}$, $C_{gd}$)을 동작점 파라미터로 계산할 수 있다.
-- 소신호 등가회로를 이용해 소신호 전압이득과 입출력 임피던스를 구할 수 있다.
-- 동작점 안정성의 개념과 이미터/소스 피드백 저항의 역할을 이해한다.
-
----
-
 ## 1. 직류 바이어스 — 4저항 바이어스 (BJT NPN)
 
 > 참고 도식: Sedra & Smith, *Microelectronic Circuits* 8판, Fig. 6.34.
@@ -57,7 +48,7 @@ $$r_o = \frac{V_A}{I_C}$$
 
 | 파라미터 | 물리 의미 | 전형값 ($I_C = 1\ \text{mA}$, $\beta=100$) |
 |---|---|---|
-| $g_m$ | 전달컨덕턴스 | $1/26\ \text{mS} \approx 38.5\ \text{mA/V}$ |
+| $g_m$ | 전달컨덕턴스 | $1\ \text{mA}/26\ \text{mV} \approx 38.5\ \text{mA/V}$ |
 | $r_\pi$ | 베이스-이미터 저항 | $\beta/g_m = 100/0.0385 \approx 2.6\ \text{k}\Omega$ |
 | $r_o$ | 출력 저항 | $V_A/I_C$, 보통 $10\sim100\ \text{k}\Omega$ |
 
@@ -123,12 +114,12 @@ $$V_B = 15\times\frac{47}{147} \approx 4.80\ \text{V}, \quad V_E = 4.80-0.7 = 4.
 
 $$I_C \approx I_E = \frac{4.10}{1500} \approx 2.73\ \text{mA}$$
 
-$$V_{CE} = 15 - 2.73\times(4700+1500) = 15 - 16.9\ \text{V}$$
+$$V_{CE} = 15 - 2.73\times10^{-3}\times(4700+1500) = 15 - 16.9 \approx -1.9\ \text{V}$$
 
 → $V_{CE} < 0$이면 포화 → $R_C$를 줄여 재설계 필요.
 수정: $R_C = 2.2\ \text{k}\Omega$ 사용 시:
 
-$$V_{CE} = 15 - 2.73\times(2200+1500) = 15 - 10.1 \approx 4.9\ \text{V}$$  ✓
+$$V_{CE} = 15 - 2.73\times10^{-3}\times(2200+1500) = 15 - 10.1 \approx 4.9\ \text{V}$$
 
 **Step 2:** 소신호 파라미터
 
@@ -142,15 +133,14 @@ $$r_o = \frac{80}{2.73\times10^{-3}} \approx 29.3\ \text{k}\Omega$$
 
 $$A_v = -g_m(R_C \| r_o \| R_L) = -0.105\times(2.2\text{k} \| 29.3\text{k} \| 10\text{k})$$
 
-$$= -0.105 \times 1.68\ \text{k}\Omega \approx -177$$
+$$= -0.105 \times 1.70\ \text{k}\Omega \approx -178$$
 
 ---
 
-## 학습·검증 기록
+## 메모
 
-- **핵심 정리:** 소신호 파라미터는 독립된 상수가 아니라 먼저 구한 DC 동작점에서 선형화한 값이며, 동작점이 포화로 밀리면 그 $g_m$, $r_\pi$, $r_o$로 계산한 이득도 성립하지 않는다.
-- **확인 근거:** BJT π-모델의 $g_m=I_C/V_T$, $r_\pi=\beta/g_m$, $r_o=V_A/I_C$는 모두 $I_C$에 의해 정해지고, 공통이미터 이득 $A_v=-g_m(R_C\parallel r_o\parallel R_L)$에도 그대로 들어가므로 DC 동작점의 능동 영역 성립을 먼저 확인해야 한다.
-- **다음 탐구:** BJT SPICE 모델의 온도별 `IS`·`BF`·`VAF`와 이미터 저항을 변화시켜 Q-point 이동이 $g_m$, $r_\pi$, 공통이미터 이득에 미치는 영향을 확인할 것이다.
+예제는 $R_C=4.7\ \text{k}\Omega$에서 $V_{CE}\approx-1.9$ V가 나와 능동 영역 가정이 깨진다. $R_C=2.2\ \text{k}\Omega$로 바꾸면 $I_C\approx2.73$ mA, $V_{CE}\approx4.9$ V이고, $g_m\approx105$ mA/V, $r_\pi\approx1.14\ \text{k}\Omega$, $r_o\approx29.3\ \text{k}\Omega$로 $A_v\approx-178$이다.
+SPICE에서 온도별 `IS`·`BF`·`VAF`와 $R_E$를 바꿔 Q-point가 움직일 때 $g_m$, $r_\pi$, 이득이 얼마나 따라 변하는지 볼 것.
 
 ---
 

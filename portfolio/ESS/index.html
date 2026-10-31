@@ -21,16 +21,7 @@
       <a class="back" href="../index.html">← 포트폴리오</a>
       <p class="kicker">02 / Energy Storage System</p>
       <h1>ESS</h1>
-      <p class="lead">태양광, 에너지저장장치, 연료전지 인버터의 계통연계 조건과 전력변환 동작을 검증했습니다.</p>
-      <section>
-        <h2>이 페이지에서 다루는 범위</h2>
-        <div class="component-grid">
-          <div><h3>발전원 결합</h3><p>태양광과 연료전지의 DC 전력이 DC Bus로 모이는 구조와 전압 변환 조건을 봅니다.</p></div>
-          <div><h3>에너지 저장</h3><p>배터리·BMS·양방향 DC/DC가 충전·대기·방전 상태를 어떻게 나누는지 정리합니다.</p></div>
-          <div><h3>계통 연계</h3><p>PCS의 유효전력 흐름과 계통 전압·주파수 상태가 운전 가능 여부에 미치는 영향을 다룹니다.</p></div>
-          <div><h3>보호와 복귀</h3><p>계통 이상, 출력 제한, 단독운전 검출 이후의 정지·유지·복귀 순서를 검증 관점에서 확인합니다.</p></div>
-        </div>
-      </section>
+      <p class="lead">태양광·ESS·연료전지 인버터의 계통연계 기능을 UL 1741 SA 항목 기준으로 HILS에서 시험한 기록입니다.</p>
       <section>
         <h2>시스템 아키텍처</h2>
         <figure class="architecture">
@@ -53,52 +44,51 @@
         <div class="reference">
           <figure class="product">
             <img src="./assets/product/ess-tesla-megapack.jpg" alt="Tesla Megapack 에너지저장장치">
-            <figcaption>대표 제품 사진 · <a href="https://www.tesla.com/firstresponders/energy" target="_blank" rel="noreferrer">Tesla Megapack</a></figcaption>
+            <figcaption>제품 예시 사진(업무 제품과 무관) · <a href="https://www.tesla.com/firstresponders/energy" target="_blank" rel="noreferrer">Tesla Megapack</a></figcaption>
           </figure>
           <div class="principle">
             <h3>저장과 계통연계</h3>
-            <p>ESS는 전력을 배터리에 저장하고 필요 시 다시 공급하는 시스템입니다. PCS는 DC와 AC 사이의 전력 흐름을 제어하며, 발전원·계통·부하 상태에 따라 충전과 방전을 조정합니다.</p>
+            <p>ESS는 전력을 배터리에 저장했다가 다시 공급합니다. PCS가 DC와 AC 사이 전력 흐름을 제어하고, 발전원·계통·부하 상태에 따라 충전과 방전을 바꿉니다.</p>
           </div>
         </div>
       </section>
       <section>
         <h2>ESS를 이루는 요소</h2>
         <div class="component-grid">
-          <div><h3>배터리</h3><p>셀·모듈·랙 또는 팩으로 에너지를 저장합니다. 시스템의 에너지 용량은 필요한 공급 시간과 연결됩니다.</p></div>
+          <div><h3>배터리</h3><p>셀·모듈·랙 단위로 에너지를 저장합니다. 에너지 용량(MWh)이 방전 지속시간을 정합니다.</p></div>
           <div><h3>BMS</h3><p>전압·온도 등 배터리 상태를 확인하고, 과충전·과방전 등 안전 조건을 관리합니다.</p></div>
           <div><h3>PCS</h3><p>배터리의 DC 전력과 계통·부하의 AC 전력 사이를 양방향으로 변환하고 충전·방전을 제어합니다.</p></div>
-          <div><h3>EMS</h3><p>상위 운전 목적에 따라 충전·방전 계획과 출력 지령을 관리하며, PCS·BMS의 상태를 종합해 봅니다.</p></div>
+          <div><h3>EMS</h3><p>운전 목적에 맞춰 충전·방전 계획과 출력 지령을 내리고, PCS·BMS 상태를 모아 봅니다.</p></div>
         </div>
       </section>
       <section>
-        <h2>계통연계 운전의 확인 순서</h2>
+        <h2>계통연계 운전 순서</h2>
         <div class="steps">
-          <div><h3>상태 확인</h3><p>계통 전압·주파수와 배터리 상태를 확인해 충전·대기·방전 가능 조건을 판단합니다.</p></div>
-          <div><h3>전력 제어</h3><p>출력 지령을 변경할 때 전력·전류의 변화율과 DC Bus 상태가 의도대로 움직이는지 확인합니다.</p></div>
-          <div><h3>보호·복귀</h3><p>계통 이상이나 단독운전 조건에서 정지·유지·복귀 시퀀스가 요구 조건에 맞는지 확인합니다.</p></div>
+          <div><h3>상태 확인</h3><p>계통 전압·주파수와 배터리 상태로 충전·대기·방전 가능 여부를 판단.</p></div>
+          <div><h3>전력 제어</h3><p>출력 지령 변경 시 전력·전류 변화율(Ramp Rate)과 DC Bus 전압 추종.</p></div>
+          <div><h3>보호·복귀</h3><p>계통 이상·단독운전에서 운전 유지 / 출력 정지 / trip / 재연계 시퀀스.</p></div>
         </div>
       </section>
       <section>
         <h2>업무</h2>
         <ul>
-          <li>충전·대기·방전 상태 전환에서 배터리 상태, 출력 지령, 전압·전류 제한 조건이 일관되게 적용되는지 확인했습니다.</li>
-          <li>출력 변화율, 전압·주파수 이상, 계통 분리 검출을 시험 시나리오로 정리하고 상태 전이와 보호 시간의 관계를 검토했습니다.</li>
-          <li>제어기 I/O와 계통·배터리·부하 모델을 연결해, 지령 변화가 PCS 출력과 DC Bus 상태에 반영되는 과정을 확인했습니다.</li>
-          <li>보호 시간, 상태 전이, 릴리스 이력을 기준으로 변경 범위를 좁히고 동일 시나리오를 다시 적용해 회귀 영향을 확인했습니다.</li>
+          <li>제어 보드를 실제 I/O·PWM으로 HILS에 연결하고, 센서 스케일·I/O 지연·보호 입력 우선순위·모드 전환 순서를 실제 제어기와 맞췄습니다.</li>
+          <li>Volt-Var, Volt-Watt, Frequency-Watt, Ramp Rate, LVRT/HVRT, Anti-Islanding, 정전·재연계를 시험 시나리오로 만들었습니다.</li>
+          <li>곡선형 기능은 시작점·종료점·중간값과 상승·하강 방향을 나눠 돌리고, 저전압에서 전류 제한에 먼저 걸리는 경우를 따로 확인했습니다.</li>
+          <li>로직을 고치면 같은 시나리오를 다시 돌려 변경 전후를 비교했습니다.</li>
         </ul>
       </section>
       <section>
-        <h2>공개 작업 캡처</h2>
-        <p class="evidence-copy">계통연계 제어와 보호 조건을 어떤 시험 항목으로 나누어 확인했는지 보여 주는 HILS 화면입니다. 원본 로그·프로젝트 식별 정보·일반 인증 판정은 포함하지 않습니다.</p>
+        <h2>시험 결과 슬라이드</h2>
         <div class="evidence-grid">
-          <figure class="evidence"><img src="./assets/evidence/ul1741_ess_power_control.png" alt="ESS 충방전 전력제어 HILS 화면"><figcaption><strong>Power Control</strong><br>충전·방전 지령과 모드 전환을 확인합니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ul1741_ramp_rate.png" alt="ESS 출력 변화율 HILS 화면"><figcaption><strong>Ramp Rate</strong><br>지령 변화율과 출력 추종을 확인합니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ul1741_voltage_ride_through.png" alt="전압 Ride Through 화면"><figcaption><strong>Voltage Ride-Through</strong><br>전압 이상 상태에서의 운전·정지·복귀 관점을 봅니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ul1741_frequency_ride_through.png" alt="주파수 Ride Through 화면"><figcaption><strong>Frequency Ride-Through</strong><br>주파수 이상 조건의 상태 전이를 봅니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ul1741_anti_islanding.png" alt="Anti Islanding 시험 화면"><figcaption><strong>Anti-Islanding</strong><br>계통 분리 검출과 출력 정지 조건을 확인합니다.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ul1741_ess_power_control.png" alt="ESS 충방전 전력제어 HILS 화면"><figcaption><strong>Power Control</strong><br>충·방전 정격 전력 제어와 모드 전환.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ul1741_ramp_rate.png" alt="ESS 출력 변화율 HILS 화면"><figcaption><strong>Ramp Rate</strong><br>정상 50~100 %I<sub>rated</sub>/s, soft-start 10~20 %I<sub>rated</sub>/s.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ul1741_voltage_ride_through.png" alt="전압 Ride Through 화면"><figcaption><strong>Voltage Ride-Through</strong><br>HV1·HV2·LV1~LV3 영역별 유지·정지·trip 시간.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ul1741_frequency_ride_through.png" alt="주파수 Ride Through 화면"><figcaption><strong>Frequency Ride-Through</strong><br>HF1·LF1 299 s 유지, HF2·LF2 0.16 s 이내 trip.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ul1741_anti_islanding.png" alt="Anti Islanding 시험 화면"><figcaption><strong>Anti-Islanding</strong><br>S3 개방 후 2 s 이내 검출·정지.</figcaption></figure>
         </div>
       </section>
-      <p class="note">시스템도는 공개용 대표 구성입니다. 고객 정보, 프로젝트 식별 정보, 시험 조건, 원본 파형과 제어 파라미터는 포함하지 않습니다.</p>
+      <p class="note">시스템도는 일반적인 계통연계 ESS 구성입니다. 계측 파형은 모자이크 처리했고, 고객·프로젝트 정보와 제어 파라미터는 싣지 않았습니다. 시험 방법은 <a href="../../studies/전공학습/02_제어시스템_설계/projects/04_ESS_HILS_계통연계_기능검증/">ESS HILS 기록</a>에 있습니다.</p>
       <p class="sources">참고: <a href="https://www.energy.gov/sites/default/files/2025-01/BESSIE_supply-chain-battery-report_111124_OPENRELEASE_SJ_1.pdf" target="_blank" rel="noreferrer">U.S. Department of Energy — BESS Components and Functions</a></p>
     </main>
   </body>

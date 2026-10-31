@@ -7,7 +7,7 @@
   <rect x="42" y="32" width="1116" height="82" rx="10" fill="#14283d"/>
   <text x="76" y="76" fill="#87d7c6" font-family="Arial, sans-serif" font-size="24" font-weight="700">2026년 04월</text>
   <text x="76" y="101" fill="#ffffff" font-family="Arial, sans-serif" font-size="29" font-weight="700">데이터센터 전력수요와 복원력</text>
-  <text x="76" y="136" fill="#4c6176" font-family="Arial, sans-serif" font-size="16">공개 자료의 사실을 제품 성과가 아닌 설계·검증 질문으로 번역</text>
+  <text x="76" y="136" fill="#4c6176" font-family="Arial, sans-serif" font-size="16">이번 달 공개 자료에서 UPS·ESS·OBC 쪽으로 이어지는 항목</text>
   <rect x="42" y="174" width="260" height="318" rx="12" fill="#e7eef5" stroke="#b7c9da"/>
   <text x="70" y="218" fill="#16324f" font-family="Arial, sans-serif" font-size="23" font-weight="700">외부 관찰</text>
   <rect x="70" y="250" width="204" height="76" rx="8" fill="#ffffff"/>
@@ -18,10 +18,10 @@
   <text x="88" y="405" fill="#617287" font-family="Arial, sans-serif" font-size="14">월별 실적 또는 전망</text>
   <path d="M302 333 L438 333" fill="none" stroke="#6b7d90" stroke-width="3" marker-end="url(#arrow)"/>
   <rect x="438" y="244" width="296" height="177" rx="12" fill="#fff7e7" stroke="#e8bd66"/>
-  <text x="468" y="286" fill="#805400" font-family="Arial, sans-serif" font-size="23" font-weight="700">읽는 기준</text>
+  <text x="468" y="286" fill="#805400" font-family="Arial, sans-serif" font-size="23" font-weight="700">연결 고리</text>
   <text x="468" y="324" fill="#47381b" font-family="Arial, sans-serif" font-size="21" font-weight="700">전원품질·부하관리</text>
-  <text x="468" y="357" fill="#6e5b36" font-family="Arial, sans-serif" font-size="16">시장 수치와 제품 시험을</text>
-  <text x="468" y="382" fill="#6e5b36" font-family="Arial, sans-serif" font-size="16">같은 결론으로 묶지 않는다</text>
+  <text x="468" y="357" fill="#6e5b36" font-family="Arial, sans-serif" font-size="16">제품 쪽에서는</text>
+  <text x="468" y="382" fill="#6e5b36" font-family="Arial, sans-serif" font-size="16">시험 조건으로 확인</text>
   <path d="M734 333 L816 237" fill="none" stroke="#6b7d90" stroke-width="3" marker-end="url(#arrow)"/><path d="M734 333 L816 333" fill="none" stroke="#6b7d90" stroke-width="3" marker-end="url(#arrow)"/><path d="M734 333 L816 429" fill="none" stroke="#6b7d90" stroke-width="3" marker-end="url(#arrow)"/>
   <rect x="816" y="184" width="342" height="105" rx="10" fill="#edf5ff" stroke="#8fb6dd"/>
   <text x="844" y="221" fill="#1f4e79" font-family="Arial, sans-serif" font-size="22" font-weight="700">UPS</text>
@@ -32,5 +32,5 @@
   <rect x="816" y="376" width="342" height="105" rx="10" fill="#f6eefc" stroke="#b999d7"/>
   <text x="844" y="413" fill="#633b81" font-family="Arial, sans-serif" font-size="22" font-weight="700">OBC</text>
   <text x="844" y="444" fill="#5f4d6e" font-family="Arial, sans-serif" font-size="17">충전조건 · 절연 · 제어 · 인터록</text>
-  <text x="42" y="560" fill="#68798b" font-family="Arial, sans-serif" font-size="14">자료 범위: 각 월 문서의 공식 참고자료 · 제품 성능 또는 고객 적용 결과를 의미하지 않음</text>
+  <text x="42" y="560" fill="#68798b" font-family="Arial, sans-serif" font-size="14">출처: 각 월 문서의 참고자료</text>
 </svg>

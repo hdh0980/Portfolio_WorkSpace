@@ -1,17 +1,8 @@
 # BJT 동작원리
 
-## 학습 목표
-- BJT의 물리적 구조(NPN/PNP)와 세 단자(E/B/C)의 역할을 설명할 수 있다.
-- 능동·포화·차단·역방향 활성 4개 동작 영역을 접합 바이어스 조건으로 판별할 수 있다.
-- 전류이득 $\beta$($h_{FE}$)와 $\alpha$의 관계를 정량적으로 활용할 수 있다.
-- Ebers-Moll 모델의 개요를 이해하고 직류 동작점(Q-point)을 계산할 수 있다.
-- BJT 스위치 동작과 포화 조건을 파워 스위칭 회로와 연결할 수 있다.
-
----
-
 ## 1. BJT 구조
 
-BJT(Bipolar Junction Transistor)는 두 개의 PN접합을 등으로 붙인 구조.
+BJT(Bipolar Junction Transistor)는 두 개의 PN접합을 등을 맞대어 붙인 구조.
 
 ```
 NPN:   E(N) | B(P) | C(N)
@@ -105,15 +96,14 @@ $$I_C \approx \frac{2.12 - 0.7}{560 + 9880/100} = \frac{1.42}{560 + 98.8} = \fra
 $$V_{CE} = 12 - 2.16\times10^{-3}(2200 + 560) = 12 - 5.96 \approx 6.04\ \text{V}$$
 
 Q-point: $(V_{CE}, I_C) = (6.04\ \text{V},\ 2.16\ \text{mA})$
-→ 능동 영역 확인: $V_{CE} > V_{CE,sat} \approx 0.2\ \text{V}$ ✓
+→ $V_{CE} > V_{CE,sat} \approx 0.2\ \text{V}$이므로 능동 영역.
 
 ---
 
-## 학습·검증 기록
+## 메모
 
-- **핵심 정리:** BJT의 능동·포화·차단·역방향 활성 영역은 BE와 BC 두 접합의 순·역바이어스 조합으로 먼저 판정하고, 그 영역에 맞는 전류 관계를 적용해야 한다.
-- **확인 근거:** 전압분배 바이어스 예제에서 $V_{TH}=2.12\ \text{V}$, $R_{TH}=9.88\ \text{k}\Omega$로 환산해 $I_C\approx2.16\ \text{mA}$와 $V_{CE}\approx6.04\ \text{V}$를 얻었고, $V_{CE,sat}\approx0.2\ \text{V}$보다 커서 능동 영역임을 확인했다.
-- **다음 탐구:** BJT SPICE 모델의 `BF`, `VAF`, `IKF`, `TF`를 바꾸어 전류이득 저하, Early 효과, 포화 저장시간이 단순 $I_C=\beta I_B$ 판정에 주는 영향을 확인할 것이다.
+전압분배 바이어스 예제를 테브낭 등가($V_{TH}=2.12$ V, $R_{TH}=9.88\ \text{k}\Omega$)로 풀면 $I_C\approx2.16$ mA, $V_{CE}\approx6.04$ V로 능동 영역이다.
+`BF`, `VAF`, `IKF`, `TF`를 바꿨을 때 전류이득 저하, Early 효과, 포화 저장시간이 $I_C=\beta I_B$ 판정을 얼마나 흔드는지는 SPICE로 따로 돌려 봐야 한다.
 
 ---
 

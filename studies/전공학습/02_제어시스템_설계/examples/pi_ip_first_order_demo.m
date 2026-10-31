@@ -1,6 +1,5 @@
 %% PI and IP reference-response comparison for a first-order plant
-% Learning example based on the PI/IP topic below. The equations and code
-% structure are independently reconstructed for this repository.
+% Kp = 1.5, Ki = 4.0, plant 1/(0.5s+1)
 % Reference: https://blog.naver.com/lagrange0115/221157947738
 %
 % Requirement: MATLAB Control System Toolbox
@@ -54,8 +53,7 @@ ylabel('Normalized output');
 title('PI vs. IP reference response');
 legend('PI', 'IP', 'Location', 'southeast');
 
-% Keep the plot used in the study note so that the Markdown page has a
-% reproducible result rather than a hand-drawn illustration.
+% Save the figure used in projects/01_PI_IP_PID_비교/README.md
 assetDirectory = fullfile(fileparts(mfilename('fullpath')), '..', 'assets');
 if ~isfolder(assetDirectory)
     mkdir(assetDirectory);
@@ -64,9 +62,4 @@ outputPath = fullfile(assetDirectory, 'pi_ip_reference_response.png');
 exportgraphics(gcf, outputPath, 'Resolution', 180);
 fprintf('Saved comparison plot: %s\n', outputPath);
 
-%% Review questions
-% 1. Why do PI and IP have the same characteristic denominator?
-% 2. Which numerator creates the different reference response?
-% 3. How do actuator saturation and anti-windup change this comparison?
-% 4. Does the conclusion remain valid when delay and measurement filters
-%    are added to the plant model?
+% TODO: add output saturation + anti-windup and compare recovery time

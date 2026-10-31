@@ -21,15 +21,7 @@
       <a class="back" href="../index.html">← 포트폴리오</a>
       <p class="kicker">01 / Uninterruptible Power Supply</p>
       <h1>UPS</h1>
-      <p class="lead">계통 전원 이상에도 부하의 전력 공급을 유지하는 UPS의 제어와 검증 업무를 수행했습니다.</p>
-      <section>
-        <h2>이 페이지에서 다루는 범위</h2>
-        <div class="detail-grid">
-          <div><h3>전력 경로</h3><p>계통 입력, 정류부, DC Link, 인버터, 배터리와 바이패스가 어떤 조건에서 부하 전력 공급에 참여하는지 정리합니다.</p></div>
-          <div><h3>방식 비교</h3><p>오프라인·라인 인터랙티브·온라인 UPS가 정상 상태와 전원 이상 상태에서 사용하는 전력 경로를 비교합니다.</p></div>
-          <div><h3>검증 조건</h3><p>부하 변동, 정전·복전, 배터리 운전, 바이패스 절체, 병렬 모듈 투입·분리처럼 출력 연속성에 영향을 주는 조건을 봅니다.</p></div>
-        </div>
-      </section>
+      <p class="lead">UPS 인버터의 출력전압 제어와 병렬운전 제어, 그리고 그 시험을 맡았던 기록입니다.</p>
       <section>
         <h2>시스템 아키텍처</h2>
         <figure class="architecture">
@@ -50,11 +42,11 @@
         <div class="reference">
           <figure class="product">
             <img src="./assets/product/ups-schneider-galaxy-300.jpg" alt="Schneider Electric Galaxy 300 UPS">
-            <figcaption>대표 제품 사진 · <a href="https://www.se.com/ww/en/product/G3HT30KHLMS/galaxy-300-30kva-400v-33-with-long-backup-chargerm-startup-5x8/" target="_blank" rel="noreferrer">Schneider Electric Galaxy 300</a></figcaption>
+            <figcaption>제품 예시 사진(업무 제품과 무관) · <a href="https://www.se.com/ww/en/product/G3HT30KHLMS/galaxy-300-30kva-400v-33-with-long-backup-chargerm-startup-5x8/" target="_blank" rel="noreferrer">Schneider Electric Galaxy 300</a></figcaption>
           </figure>
           <div class="principle">
             <h3>무정전 전력 공급</h3>
-            <p>정상 상태에서는 정류부와 인버터가 부하에 안정된 교류 전력을 공급합니다. 계통 이상 시에는 배터리가 DC Link를 유지해 인버터 출력의 연속성을 확보합니다.</p>
+            <p>정상 상태에서는 정류부와 인버터가 부하에 교류 전력을 공급합니다. 계통이 끊기면 배터리가 DC Link를 받치고, 인버터는 출력을 그대로 이어 갑니다.</p>
           </div>
         </div>
       </section>
@@ -62,42 +54,41 @@
         <h2>UPS 방식</h2>
         <div class="compare">
           <table>
-            <thead><tr><th>방식</th><th>정상 운전</th><th>정전·전원 품질 이상 시</th><th>적용 관점</th></tr></thead>
+            <thead><tr><th>방식</th><th>정상 운전</th><th>정전·전원 품질 이상 시</th><th>주 용도</th></tr></thead>
             <tbody>
-              <tr><td><strong>스탠바이<br>(Standby · 흔히 오프라인)</strong></td><td>계통 전력이 부하로 전달되고, 인버터는 대기합니다.</td><td>정전 또는 큰 전압 강하를 감지하면 배터리·인버터 경로로 전환합니다.</td><td>비중요 부하나 비교적 단순한 백업 전원에 적합한 구성입니다.</td></tr>
-              <tr><td><strong>라인 인터랙티브<br>(Line-interactive)</strong></td><td>계통 전력을 기본으로 사용하면서 전압 조정 기능으로 저전압·과전압을 보정합니다.</td><td>전압 변동은 가능한 한 배터리를 사용하지 않고 조정하고, 정전 시에는 배터리 경로로 전환합니다.</td><td>전원 변동이 있으나 연속 변환까지는 필요하지 않은 서버·네트워크 장비에 주로 검토합니다.</td></tr>
-              <tr><td><strong>온라인<br>(Double-conversion)</strong></td><td>입력 AC를 DC로 변환한 뒤 다시 AC로 만들어, 부하에는 인버터 출력이 계속 공급됩니다.</td><td>배터리가 DC Link를 유지하므로 배터리 운전으로의 전환 시간이 없습니다.</td><td>전원 품질에 민감하거나 높은 연속성이 필요한 중요 부하에 검토합니다.</td></tr>
+              <tr><td><strong>스탠바이<br>(Standby · 흔히 오프라인)</strong></td><td>계통 전력이 부하로 전달되고, 인버터는 대기합니다.</td><td>정전 또는 큰 전압 강하를 감지하면 배터리·인버터 경로로 전환합니다.</td><td>비중요 부하, 단순 백업 전원</td></tr>
+              <tr><td><strong>라인 인터랙티브<br>(Line-interactive)</strong></td><td>계통 전력을 기본으로 사용하면서 전압 조정 기능으로 저전압·과전압을 보정합니다.</td><td>전압 변동은 가능한 한 배터리를 사용하지 않고 조정하고, 정전 시에는 배터리 경로로 전환합니다.</td><td>전원 변동은 있지만 상시 이중 변환까지는 필요 없는 서버·네트워크 장비</td></tr>
+              <tr><td><strong>온라인<br>(Double-conversion)</strong></td><td>입력 AC를 DC로 변환한 뒤 다시 AC로 만들어, 부하에는 인버터 출력이 계속 공급됩니다.</td><td>배터리가 DC Link를 유지하므로 배터리 운전으로의 전환 시간이 없습니다.</td><td>전원 품질에 민감하거나 끊김이 허용되지 않는 중요 부하</td></tr>
             </tbody>
           </table>
         </div>
       </section>
       <section>
-        <h2>설계·검증 관점</h2>
+        <h2>시험에서 본 것</h2>
         <div class="detail-grid">
-          <div><h3>출력 품질</h3><p>정상·과도 조건에서 출력전압, 주파수, 파형 품질이 부하 요구에 맞는지 확인합니다.</p></div>
-          <div><h3>에너지 전환</h3><p>정전 감지, 배터리 운전, 복전 후 재충전과 정상 경로 복귀가 순서대로 동작하는지 확인합니다.</p></div>
-          <div><h3>가용성</h3><p>병렬운전의 전류 분담, 정적 바이패스, 모듈 교체·투입 조건이 출력 연속성을 해치지 않는지 확인합니다.</p></div>
+          <div><h3>출력 품질</h3><p>선형·비선형·불평형 부하와 부하 급변에서 출력전압 처짐과 회복 시간.</p></div>
+          <div><h3>에너지 전환</h3><p>정전 감지 → 배터리 운전 → 복전 후 재충전·정상 경로 복귀 순서.</p></div>
+          <div><h3>가용성</h3><p>병렬 전류 분담 편차, 정적 바이패스 절체, 운전 중 모듈 투입·분리 때 출력 연속성.</p></div>
         </div>
       </section>
       <section>
         <h2>업무</h2>
         <ul>
-          <li>출력전압·전류 제어에서 정상 운전과 한계 조건을 나누어 확인하고, 부하 변화에 대한 출력 응답을 검토했습니다.</li>
-          <li>병렬운전에서 모듈 간 전류 분담, 동기 상태, 투입·분리 순서가 출력 연속성에 미치는 영향을 확인했습니다.</li>
-          <li>부하 변동, 정전·복전, 배터리 운전, 바이패스 절체를 시험 조건으로 분리해 상태 전이와 복귀 조건을 점검했습니다.</li>
-          <li>이상 발생 시 결선·센서·게이트 구동·통신·제어 순서로 확인 범위를 좁히고, 파형과 상태 정보를 함께 검토했습니다.</li>
+          <li>3레벨 인버터 출력전압 제어: 인덕터 전류 / 커패시터 전류 피드백을 비교하고, 부하전류 전향 보상을 넣어 부하 급변 시 전압 처짐을 줄였습니다.</li>
+          <li>병렬운전: ALS·3C 전류 분담 방식을 비교하고, PWM carrier 동기와 전압 지령 위상 동기로 고주파·저주파 순환전류를 나눠 잡았습니다.</li>
+          <li>부하 변동, 정전·복전, 배터리 운전, 바이패스 절체를 시험 조건별로 나눠 상태 전이와 복귀 조건을 점검했습니다.</li>
+          <li>이상이 생기면 결선 → 센서 → 게이트 구동 → 통신 → 제어 순으로 범위를 좁혀 원인을 찾았습니다.</li>
         </ul>
       </section>
       <section>
-        <h2>공개 작업 캡처</h2>
-        <p class="evidence-copy">파형은 병렬운전·부하 과도·모듈 투입·분리 조건에서 어떤 관계를 확인했는지 보여 주는 공개용 자료입니다. 제품 식별 정보, 원본 계측값, 인증 판정은 포함하지 않습니다.</p>
+        <h2>시험 캡처</h2>
         <div class="evidence-grid">
-          <figure class="evidence"><img src="./assets/evidence/ups_parallel_waveform.png" alt="병렬 UPS의 전류 분담과 출력 파형"><figcaption><strong>병렬운전</strong><br>모듈별 전류 분담과 출력의 시간 관계를 확인합니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ups_load_transient.png" alt="UPS 부하 과도 파형"><figcaption><strong>부하 과도</strong><br>부하 변화 전후 출력 연속성과 과도응답을 봅니다.</figcaption></figure>
-          <figure class="evidence"><img src="./assets/evidence/ups_hot_swap.png" alt="UPS Hot Swap 조건 파형"><figcaption><strong>Hot Swap</strong><br>모듈 투입·분리 뒤 전류 이관과 수렴을 봅니다.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ups_parallel_waveform.png" alt="병렬 UPS의 전류 분담과 출력 파형"><figcaption><strong>병렬운전</strong><br>2대 병렬, 모듈 전류 5.31 A / 4.81 A (평균 대비 약 ±5 %).</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ups_load_transient.png" alt="UPS 부하 과도 파형"><figcaption><strong>부하 투입</strong><br>0 ms 투입 후 분담 전류 약 ±10 A → ±25 A, 출력전압 진폭 유지.</figcaption></figure>
+          <figure class="evidence"><img src="./assets/evidence/ups_hot_swap.png" alt="UPS Hot Swap 조건 파형"><figcaption><strong>Hot Swap</strong><br>운전 중 C3 모듈 분리, 남은 세 모듈이 부하 전류를 이어받음.</figcaption></figure>
         </div>
       </section>
-      <p class="note">시스템도는 공개용 대표 구성입니다. 회로도, 제어 파라미터, 원본 시험 데이터와 제품 식별 정보는 포함하지 않습니다.</p>
+      <p class="note">시스템도는 일반적인 이중 변환 UPS 구성입니다. 회로도, 제어 파라미터, 고객·제품 정보는 싣지 않았습니다. 제어 설계 과정은 <a href="../../studies/전공학습/02_제어시스템_설계/projects/03_UPS_병렬운전_제어/">병렬운전 기록</a>과 <a href="../../studies/전공학습/02_제어시스템_설계/projects/02_3레벨_UPS_출력전압제어/">출력전압 제어 기록</a>에 있습니다.</p>
       <p class="sources">참고: <a href="https://www.eaton.com/us/en-us/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/types-of-ups-systems.html" target="_blank" rel="noreferrer">Eaton — Types of UPS systems</a></p>
     </main>
   </body>
