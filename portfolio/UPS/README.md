@@ -19,6 +19,6 @@
 ## 문서
 
 - [사례 문서](./CASE_STUDY.md) · [화면형 문서](./index.html)
-- 제어 설계 기록: [3레벨 UPS 출력전압 제어와 부하전류 보상](../../studies/전공학습/02_제어시스템_설계/projects/02_3레벨_UPS_출력전압제어/) · [UPS 병렬운전과 순환전류 억제](../../studies/전공학습/02_제어시스템_설계/projects/03_UPS_병렬운전_제어/)
+- 제어 설계 기록: [3레벨 UPS 출력전압 제어와 부하전류 보상](../../studies/전공학습/02_제어시스템_설계/04_업무_설계기록/01_3레벨_UPS_출력전압제어.md) · [UPS 병렬운전과 순환전류 억제](../../studies/전공학습/02_제어시스템_설계/04_업무_설계기록/02_UPS_병렬운전_제어.md)
 
 참고: [Eaton — UPS 유형](https://www.eaton.com/us/en-us/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/types-of-ups-systems.html)

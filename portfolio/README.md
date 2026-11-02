@@ -6,6 +6,6 @@
 | 02 | ESS | [README](./ESS/README.md) · [Case study](./ESS/CASE_STUDY.md) | [HTML](./ESS/index.html) | UL 1741 SA 항목 HILS 시험 결과 슬라이드 5장 |
 | 03 | OBC | [README](./OBC/README.md) · [Case study](./OBC/CASE_STUDY.md) | [HTML](./OBC/index.html) | PFC·DC/DC·제어 학습 화면 (차량 시험 캡처 아님) |
 
-UPS·ESS의 제어 설계와 시험 순서는 [제어시스템 설계 기록](../studies/전공학습/02_제어시스템_설계/README.md#설계-기록-업무)에 따로 정리했습니다.
+UPS·ESS의 제어 설계와 시험 순서는 [제어시스템 설계 기록](../studies/전공학습/02_제어시스템_설계/04_업무_설계기록/)에 따로 정리했습니다.
 
 회로 상세, 제어 gain, 고객·제품 식별 정보, 원본 시험 로그는 싣지 않았습니다.

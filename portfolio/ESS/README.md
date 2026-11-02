@@ -19,6 +19,6 @@
 ## 문서
 
 - [사례 문서](./CASE_STUDY.md) · [화면형 문서](./index.html)
-- 제어 설계 기록: [ESS HILS 기반 계통연계 기능 검증](../../studies/전공학습/02_제어시스템_설계/projects/04_ESS_HILS_계통연계_기능검증/)
+- 제어 설계 기록: [ESS HILS 기반 계통연계 기능 검증](../../studies/전공학습/02_제어시스템_설계/04_업무_설계기록/03_ESS_HILS_계통연계_기능검증.md)
 
 참고: [U.S. DOE — BESS 구성요소와 기능](https://www.energy.gov/sites/default/files/2025-01/BESSIE_supply-chain-battery-report_111124_OPENRELEASE_SJ_1.pdf)
