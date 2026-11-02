@@ -46,10 +46,10 @@ $$
 
 ## 4. MATLAB 실습
 
-- [평형 3상 전력 코드](./examples/three_phase_power.m)
+- [평형 3상 전력 코드](./01_MATLAB_코드/three_phase_power.m)
 - 세 상의 전압·전류 파형과 전체 순간전력을 계산하고 평균값을 복소전력식과 비교한다.
 
-![MATLAB 평형 3상 전력](./assets/three_phase_power.png)
+![MATLAB 평형 3상 전력](./02_결과_그림/three_phase_power.png)
 
 ## 메모
 

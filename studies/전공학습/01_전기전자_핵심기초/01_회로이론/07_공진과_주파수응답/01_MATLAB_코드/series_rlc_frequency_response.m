@@ -3,7 +3,7 @@ function result = series_rlc_frequency_response(outputFile)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFile = fullfile(here, "..", "assets", "series_rlc_frequency_response.png");
+    outputFile = fullfile(here, "..", "02_결과_그림", "series_rlc_frequency_response.png");
 end
 ensureOutputFolder(outputFile);
 

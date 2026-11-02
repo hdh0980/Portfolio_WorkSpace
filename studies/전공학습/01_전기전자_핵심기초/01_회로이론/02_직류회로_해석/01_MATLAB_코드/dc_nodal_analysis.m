@@ -3,7 +3,7 @@ function result = dc_nodal_analysis(outputFile)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFile = fullfile(here, "..", "assets", "dc_nodal_analysis.png");
+    outputFile = fullfile(here, "..", "02_결과_그림", "dc_nodal_analysis.png");
 end
 ensureOutputFolder(outputFile);
 

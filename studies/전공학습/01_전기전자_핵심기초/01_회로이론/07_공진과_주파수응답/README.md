@@ -49,10 +49,10 @@ $$
 
 ## 5. MATLAB 실습
 
-- [직렬 RLC 주파수응답 코드](./examples/series_rlc_frequency_response.m)
+- [직렬 RLC 주파수응답 코드](./01_MATLAB_코드/series_rlc_frequency_response.m)
 - 이론 공진주파수와 수치 스윕의 피크 주파수를 비교한다.
 
-![MATLAB 직렬 RLC 공진](./assets/series_rlc_frequency_response.png)
+![MATLAB 직렬 RLC 공진](./02_결과_그림/series_rlc_frequency_response.png)
 
 ## 메모
 

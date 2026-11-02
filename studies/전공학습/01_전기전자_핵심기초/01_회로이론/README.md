@@ -23,16 +23,16 @@
 | 단원 | 예제 | 검증 기준 | 캡처 |
 |---|---|---|---|
 | 직류회로 | [노달·메시·슈퍼노드](./02_직류회로_해석/) | KCL·KVL·전압원 구속식 잔차 | [회로도 3종](./02_직류회로_해석/#5-matlab-검증과-재생성) |
-| 과도응답 | [RLC 계단응답](./04_1차_2차_과도응답/examples/rlc_transient_response.m) | 정상상태 전압·전류 | [PNG](./04_1차_2차_과도응답/assets/rlc_transient_response.png) |
-| 3상회로 | [평형 3상 전력](./06_교류전력과_3상회로/examples/three_phase_power.m) | 시간영역·페이저 전력 일치 | [PNG](./06_교류전력과_3상회로/assets/three_phase_power.png) |
-| 공진 | [직렬 RLC 주파수응답](./07_공진과_주파수응답/examples/series_rlc_frequency_response.m) | 이론·수치 공진주파수 일치 | [PNG](./07_공진과_주파수응답/assets/series_rlc_frequency_response.png) |
-| 2포트 | [ABCD 종속연결](./09_결합회로와_2포트망/examples/two_port_abcd_cascade.m) | 상호성 행렬식 $AD-BC=1$ | [PNG](./09_결합회로와_2포트망/assets/two_port_abcd_cascade.png) |
+| 과도응답 | [RLC 계단응답](./04_1차_2차_과도응답/01_MATLAB_코드/rlc_transient_response.m) | 정상상태 전압·전류 | [PNG](./04_1차_2차_과도응답/02_결과_그림/rlc_transient_response.png) |
+| 3상회로 | [평형 3상 전력](./06_교류전력과_3상회로/01_MATLAB_코드/three_phase_power.m) | 시간영역·페이저 전력 일치 | [PNG](./06_교류전력과_3상회로/02_결과_그림/three_phase_power.png) |
+| 공진 | [직렬 RLC 주파수응답](./07_공진과_주파수응답/01_MATLAB_코드/series_rlc_frequency_response.m) | 이론·수치 공진주파수 일치 | [PNG](./07_공진과_주파수응답/02_결과_그림/series_rlc_frequency_response.png) |
+| 2포트 | [ABCD 종속연결](./09_결합회로와_2포트망/01_MATLAB_코드/two_port_abcd_cascade.m) | 상호성 행렬식 $AD-BC=1$ | [PNG](./09_결합회로와_2포트망/02_결과_그림/two_port_abcd_cascade.png) |
 
-전체 예제는 [run_all_circuit_examples.m](./examples/run_all_circuit_examples.m)로
+전체 예제는 [run_all_circuit_examples.m](./run_all_circuit_examples.m)로
 실행합니다. 추가 툴박스 없이 기본 MATLAB R2025b에서 검증했습니다.
 
 ```matlab
-cd('studies/전공학습/01_전기전자_핵심기초/01_회로이론/examples')
+cd('studies/전공학습/01_전기전자_핵심기초/01_회로이론')
 run_all_circuit_examples
 ```
 

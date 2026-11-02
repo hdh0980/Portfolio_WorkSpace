@@ -57,10 +57,10 @@ $$
 
 ## 5. MATLAB 실습
 
-- [RLC 계단응답 코드](./examples/rlc_transient_response.m)
+- [RLC 계단응답 코드](./01_MATLAB_코드/rlc_transient_response.m)
 - `ode45`로 $i_L$와 $v_C$의 상태방정식을 적분하고 정상상태 오차를 검증한다.
 
-![MATLAB RLC 과도응답](./assets/rlc_transient_response.png)
+![MATLAB RLC 과도응답](./02_결과_그림/rlc_transient_response.png)
 
 ## 메모
 

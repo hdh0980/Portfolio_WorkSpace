@@ -53,8 +53,8 @@ ylabel('Normalized output');
 title('PI vs. IP reference response');
 legend('PI', 'IP', 'Location', 'southeast');
 
-% Save the figure next to this script (used in README.md of this folder)
-outputPath = fullfile(fileparts(mfilename('fullpath')), 'pi_ip_reference_response.png');
+% Save the figure to ../02_결과_그림 (used in README.md of this example)
+outputPath = fullfile(fileparts(mfilename('fullpath')), '..', '02_결과_그림', 'pi_ip_reference_response.png');
 exportgraphics(gcf, outputPath, 'Resolution', 180);
 fprintf('Saved comparison plot: %s\n', outputPath);
 

@@ -79,10 +79,10 @@ $$
 
 ## 6. MATLAB 실습
 
-- [ABCD 종속연결 코드](./examples/two_port_abcd_cascade.m)
+- [ABCD 종속연결 코드](./01_MATLAB_코드/two_port_abcd_cascade.m)
 - R-C 2포트 두 단의 주파수응답과 $AD-BC=1$ 상호성 잔차를 계산한다.
 
-![MATLAB 2포트 ABCD 응답](./assets/two_port_abcd_cascade.png)
+![MATLAB 2포트 ABCD 응답](./02_결과_그림/two_port_abcd_cascade.png)
 
 ## 메모
 

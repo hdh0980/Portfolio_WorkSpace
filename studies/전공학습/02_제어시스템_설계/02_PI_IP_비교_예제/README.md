@@ -21,10 +21,10 @@ PI 분자의 영점 $s=-8/3$ 하나다.
 
 ## 결과
 
-- 코드: [`pi_ip_first_order_demo.m`](./pi_ip_first_order_demo.m)
-  (Control System Toolbox 필요, 실행하면 같은 폴더에 아래 PNG를 다시 만든다)
+- 코드: [`pi_ip_first_order_demo.m`](./01_MATLAB_코드/pi_ip_first_order_demo.m)
+  (Control System Toolbox 필요, 실행하면 `02_결과_그림`에 아래 PNG를 다시 만든다)
 
-![MATLAB으로 다시 생성한 PI·IP 지령 응답](./pi_ip_reference_response.png)
+![MATLAB으로 다시 생성한 PI·IP 지령 응답](./02_결과_그림/pi_ip_reference_response.png)
 
 | 구조 | 상승시간(10–90 %) | 오버슈트 |
 |---|---:|---:|

@@ -18,7 +18,7 @@
 $V_2$가 $R_3$으로 연결된 2노드 저항회로다. 파란 점이 미지 노드이고
 아래 도선 전체가 기준 노드 0 V다.
 
-![2노드 직류회로의 노달해석 회로도](./assets/dc_nodal_analysis.png)
+![2노드 직류회로의 노달해석 회로도](./02_결과_그림/dc_nodal_analysis.png)
 
 ### 1.1 가지전류를 노드전압으로 표현
 
@@ -92,7 +92,7 @@ $$
 가운데 공유저항 $R_3$에는 두 메시전류가 반대 방향으로 지나므로, 위에서 아래로
 흐르는 실제 가지전류는 $i_1-i_2$다.
 
-![공유저항이 있는 2메시 직류회로](./assets/dc_mesh_analysis.png)
+![공유저항이 있는 2메시 직류회로](./02_결과_그림/dc_mesh_analysis.png)
 
 ### 2.1 메시별 KVL
 
@@ -143,7 +143,7 @@ $3(1.091)=1(3.273)=3.273$ V가 반올림 오차 안에서 KVL을 만족한다.
 옴의 법칙으로 쓸 수 없다. 점선 경계를 슈퍼노드 하나로 묶어 바깥으로
 나가는 전류에 KCL을 쓰고, 전압원 극성으로 구속식을 하나 더한다.
 
-![전압원을 포함한 슈퍼노드 직류회로](./assets/dc_supernode_analysis.png)
+![전압원을 포함한 슈퍼노드 직류회로](./02_결과_그림/dc_supernode_analysis.png)
 
 4 mA 전류원이 슈퍼노드로 전류를 주입하므로
 
@@ -180,18 +180,18 @@ $$
 
 ## 5. MATLAB 검증과 재생성
 
-- [노달해석 코드](./examples/dc_nodal_analysis.m)
-- [메시해석 코드](./examples/dc_mesh_analysis.m)
-- [슈퍼노드 코드](./examples/dc_supernode_analysis.m)
-- [직류회로 3예제 실행기](./examples/run_dc_analysis_examples.m)
-- [회로도 렌더러](./examples/render_dc_circuit.m)
-- [수치·캡처 회귀시험](./examples/test_dc_analysis_examples.m)
+- [노달해석 코드](./01_MATLAB_코드/dc_nodal_analysis.m)
+- [메시해석 코드](./01_MATLAB_코드/dc_mesh_analysis.m)
+- [슈퍼노드 코드](./01_MATLAB_코드/dc_supernode_analysis.m)
+- [직류회로 3예제 실행기](./01_MATLAB_코드/run_dc_analysis_examples.m)
+- [회로도 렌더러](./01_MATLAB_코드/render_dc_circuit.m)
+- [수치·캡처 회귀시험](./01_MATLAB_코드/test_dc_analysis_examples.m)
 
 세 회로도는 해석 코드가 쓴 저항값·소스값·계산 결과를 받아 MATLAB이 직접
 그린다. 회귀시험은 노드전압, 메시전류, 구속식 잔차와 PNG 해상도를 검사한다.
 
 ```matlab
-cd('studies/전공학습/01_전기전자_핵심기초/01_회로이론/02_직류회로_해석/examples')
+cd('studies/전공학습/01_전기전자_핵심기초/01_회로이론/02_직류회로_해석/01_MATLAB_코드')
 run_dc_analysis_examples
 results = runtests('test_dc_analysis_examples.m');
 assertSuccess(results)

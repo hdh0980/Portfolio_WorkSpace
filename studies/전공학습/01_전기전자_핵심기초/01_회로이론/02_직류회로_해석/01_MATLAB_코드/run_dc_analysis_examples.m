@@ -3,7 +3,7 @@ function results = run_dc_analysis_examples(outputFolder)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFolder = fullfile(here, "..", "assets");
+    outputFolder = fullfile(here, "..", "02_결과_그림");
 end
 if ~isfolder(outputFolder)
     mkdir(outputFolder);

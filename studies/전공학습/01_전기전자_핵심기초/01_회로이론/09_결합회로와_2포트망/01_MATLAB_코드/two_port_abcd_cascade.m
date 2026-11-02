@@ -3,7 +3,7 @@ function result = two_port_abcd_cascade(outputFile)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFile = fullfile(here, "..", "assets", "two_port_abcd_cascade.png");
+    outputFile = fullfile(here, "..", "02_결과_그림", "two_port_abcd_cascade.png");
 end
 ensureOutputFolder(outputFile);
 

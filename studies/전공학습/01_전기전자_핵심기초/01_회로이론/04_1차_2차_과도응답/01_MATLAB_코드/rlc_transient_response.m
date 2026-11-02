@@ -3,7 +3,7 @@ function result = rlc_transient_response(outputFile)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFile = fullfile(here, "..", "assets", "rlc_transient_response.png");
+    outputFile = fullfile(here, "..", "02_결과_그림", "rlc_transient_response.png");
 end
 ensureOutputFolder(outputFile);
 

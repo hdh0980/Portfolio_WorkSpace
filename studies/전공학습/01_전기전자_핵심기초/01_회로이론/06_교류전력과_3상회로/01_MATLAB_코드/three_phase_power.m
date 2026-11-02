@@ -3,7 +3,7 @@ function result = three_phase_power(outputFile)
 
 if nargin < 1
     here = fileparts(mfilename("fullpath"));
-    outputFile = fullfile(here, "..", "assets", "three_phase_power.png");
+    outputFile = fullfile(here, "..", "02_결과_그림", "three_phase_power.png");
 end
 ensureOutputFolder(outputFile);
 
