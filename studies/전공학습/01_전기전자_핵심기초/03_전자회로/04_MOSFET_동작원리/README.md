@@ -1,14 +1,5 @@
 # MOSFET 동작원리
 
-## 학습 목표
-- NMOS/PMOS의 구조와 채널 형성 원리를 설명할 수 있다.
-- 문턱전압 $V_{th}$, 선형·포화·차단 영역의 $I_D$-$V_{DS}$ 특성을 수식으로 표현할 수 있다.
-- 채널길이 변조 계수 $\lambda$와 기생 커패시턴스 $C_{gs}$/$C_{gd}$의 영향을 이해한다.
-- 전력 MOSFET의 $R_{DS(on)}$, $Q_g$, $V_{BR}$ 관계를 EV OBC 설계에 적용할 수 있다.
-- SiC/GaN MOSFET이 Si MOSFET 대비 갖는 성능 이점을 정량적으로 비교할 수 있다.
-
----
-
 ## 1. MOSFET 구조
 
 **NMOS (n채널 Enhancement):**
@@ -150,11 +141,10 @@ $$r_o = \frac{1}{\lambda I_D} = \frac{1}{0.02 \times 26.6\times10^{-3}} \approx 
 
 ---
 
-## 학습·검증 기록
+## 메모
 
-- **핵심 정리:** $V_{GS}-V_{th}$와 $V_{DS}$의 대소 관계로 차단·선형·포화 영역을 판정하고, 스위칭에서는 정적 $R_{DS(on)}$뿐 아니라 $Q_g$, $C_{gd}$, $C_{oss}$의 전압 의존성까지 함께 봐야 한다.
-- **확인 근거:** $V_{GS}=3\ \text{V}$, $V_{th}=0.8\ \text{V}$이면 과구동 전압은 $2.2\ \text{V}$이고, $V_{DS}=5\ \text{V}$가 이를 넘으므로 포화 영역이다. 제시된 전류식에 $\lambda=0.02\ \text{V}^{-1}$까지 반영하면 $I_D\approx26.6\ \text{mA}$가 된다.
-- **다음 탐구:** 전력 MOSFET SPICE 모델의 비선형 $C_{gd}(V_{DS})$·$C_{oss}(V_{DS})$와 내부 게이트 저항을 바꾸어 밀러 플래토와 게이트 전하 곡선이 선형 $Q_g=C_{iss}\Delta V_{GS}$ 근사에서 얼마나 벗어나는지 확인할 것이다.
+$V_{GS}-V_{th}=2.2$ V가 $V_{DS}=5$ V보다 작아 포화 영역이고, $\lambda=0.02\ \text{V}^{-1}$까지 넣으면 $I_D\approx26.6$ mA, $g_m=22$ mA/V, $r_o\approx1.88\ \text{k}\Omega$다.
+전력 MOSFET SPICE 모델에서 비선형 $C_{gd}(V_{DS})$, $C_{oss}(V_{DS})$와 내부 게이트 저항을 바꿔, 밀러 플래토와 게이트 전하 곡선이 $Q_g=C_{iss}\Delta V_{GS}$ 근사에서 얼마나 벗어나는지 볼 것.
 
 ---
 

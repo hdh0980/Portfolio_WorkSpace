@@ -1,11 +1,11 @@
-# Local planning artifacts retained outside the public portfolio
+# local notes
 /docs/superpowers/
 
-# Personal agent workspace, local secrets, and machine-specific settings
+# local settings and secrets
 /workspace-private/
 /.env
 /.env.*
 
-# Local browser-check artifacts
+# local test output
 /output/playwright/
 /.playwright-cli/
