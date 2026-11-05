@@ -1,25 +1,31 @@
-# 전력변환 엔지니어링 포트폴리오
+# ✏️ 이름 · 전력변환 제어 엔지니어
 
-UPS·ESS·OBC 업무 사례와 전공 공부 기록입니다.
+UPS 인버터의 출력전압·병렬운전 제어와 ESS PCS의 계통연계 기능 검증을 해 왔습니다.
+제어 알고리즘을 설계하고, HILS와 실제 전력 장비 시험으로 확인하는 일을 주로 했습니다.
 
-## 1. 포트폴리오
+✏️ 경력 한 줄 (예: OO년차, UPS·ESS 제어 SW 개발 / 현재 관심 분야)
 
-| 사례 | 내용 | 문서 |
-| --- | --- | --- |
-| UPS | 병렬운전 전류 분담, 부하 투입, 운전 중 모듈 분리 시험. 오실로스코프 파형 3장 | [UPS](./portfolio/UPS/README.md) |
-| ESS | UL 1741 SA 항목(충·방전 전력 제어, Ramp Rate, Ride-Through, Anti-Islanding) HILS 시험 | [ESS](./portfolio/ESS/README.md) |
-| OBC | AC 입력부터 배터리까지의 전력 경로와 G2V·V2L·V2G 운전 조건 | [OBC](./portfolio/OBC/README.md) |
+## 프로젝트
 
-[화면으로 보기](./portfolio/index.html)
+| # | 프로젝트 | 한 일 | 대표 결과 |
+|---:|---|---|---|
+| 01 | [UPS 병렬운전 제어](./01_UPS_병렬운전_제어/) | 3레벨 UPS 출력전압 제어, 병렬 전류 분담과 순환전류 억제 | 2대 병렬 분담 편차 약 ±5 %, 운전 중 모듈 분리 시 부하 유지 |
+| 02 | [ESS 계통연계 HILS 검증](./02_ESS_계통연계_HILS_검증/) | UL 1741 SA 항목을 HILS에서 시험 (Ride-Through, Ramp Rate, Anti-Islanding 등) | 5개 항목 시험 결과 |
+| 03 | [OBC 전력단·운전모드](./03_OBC_전력단_운전모드/) | G2V·V2G·V2L 상태 전이와 보호 조건 정리 | ✏️ |
 
-## 2. 전공학습
+## 기술
 
-- [전체 지도](./studies/README.md)
-- [과목·프로젝트별 인덱스](./studies/전공학습/README.md)
-- [전기전자 핵심기초](./studies/전공학습/01_전기전자_핵심기초/README.md)
-- [제어시스템 설계](./studies/전공학습/02_제어시스템_설계/README.md) — UPS·ESS 제어 설계 기록 포함
-- [산업동향 월별 기록 (2025–2026)](./studies/산업동향_파악/README.md)
+| 분야 | 내용 |
+|---|---|
+| 제어 | 전압·전류 이중루프, PI/IP, 부하전류 전향 보상, 병렬 전류 분담(ALS·3C) |
+| 계통연계 | Volt-Var, Volt-Watt, Frequency-Watt, LVRT/HVRT, Anti-Islanding (UL 1741 SA) |
+| 검증 | HILS, 오실로스코프 계측, MATLAB/Simulink |
+| 구현 | ✏️ DSP 칩과 개발 환경 (예: TI C2000, CCS) |
 
----
+## 공부 기록
 
-고객명, 제품 식별 정보, 회로 구현, 제어 파라미터, 원본 시험 로그는 싣지 않았습니다. 제품 사진은 구조 설명용 예시이며 실제 업무 제품과 무관합니다.
+전력전자·제어 전공 노트는 [studies](./studies/)에 있습니다.
+
+## 연락처
+
+✏️ 이메일 · LinkedIn

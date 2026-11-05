@@ -28,7 +28,7 @@ HILS 모델에는 전력변환기와 계통 조건을 넣고, 제어 보드는 �
 전류 제한에 먼저 걸릴 때 결과도 별도로 확인했다. 저전압에서 정격 유효전력을
 요구하면 전류 제한 때문에 기대값과 실제 출력이 달라질 수 있기 때문이다.
 
-![전압 Ride-Through 공개 시험 캡처](../../../../portfolio/ESS/assets/evidence/ul1741_voltage_ride_through.png)
+![전압 Ride-Through 공개 시험 캡처](../01_시험_캡처/03_전압_Ride-Through.png)
 
 *전압 Ride-Through 결과 슬라이드. 왼쪽은 시험 영역(HV2 0.16 s 이내 trip, HV1 12 s
 유지, LV1 20 s, LV2 10 s, LV3 1 s 유지 등), 오른쪽은 계측 파형(모자이크 처리).*
